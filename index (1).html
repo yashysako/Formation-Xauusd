@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation Trading XAUUSD - Trading Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(to right, #FBBF24, #FCD34D, #FDE047);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Background animated gradient -->
+    <div class="fixed inset-0 z-0">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-yellow-900/20 rounded-full blur-3xl opacity-30"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-yellow-900/10 rounded-full blur-3xl opacity-20"></div>
+    </div>
+
+    <div class="relative z-10">
+        <!-- HEADER -->
+        <header class="fixed top-0 w-full backdrop-blur-md bg-black/50 border-b border-yellow-900/30 z-50">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center font-bold text-sm">
+                        XAU
+                    </div>
+                    <span class="text-xl font-bold">Formation par NeoDTrading</span>
+                </div>
+                <nav class="hidden md:flex gap-8">
+                    <button onclick="scrollToSection('programme')" class="text-sm hover:text-yellow-400 transition cursor-pointer">Programme</button>
+                    <button onclick="scrollToSection('contact')" class="text-sm hover:text-yellow-400 transition cursor-pointer">Contact</button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="min-h-screen pt-20 flex items-center justify-center px-6 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-1/4 left-1/4 text-yellow-400/10 text-9xl font-bold">📈</div>
+            </div>
+
+            <div class="max-w-4xl mx-auto text-center space-y-8 relative">
+                <div class="space-y-4">
+                    <div class="inline-block px-4 py-2 border border-yellow-500/50 rounded-full text-yellow-400 text-sm font-mono">
+                        Formation exclusive XAUUSD
+                    </div>
+                    
+                    <h1 class="text-6xl md:text-7xl font-black leading-tight">
+                        Du chaos <span class="hero-gradient">à la consistance</span>
+                    </h1>
+
+                    <p class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                        Maîtrise le trading sur l'or avec une formation structurée, du mental béton et un accompagnement direct. 
+                        <span class="text-yellow-400 font-semibold"> 80% mental, 20% technique.</span>
+                    </p>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-4 justify-center pt-8">
+                    <button onclick="scrollToSection('contact')" class="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-500/50 transition transform hover:scale-105 cursor-pointer">
+                        Commencer maintenant
+                    </button>
+                    <button onclick="scrollToSection('programme')" class="px-8 py-4 border border-yellow-500/50 rounded-lg font-semibold hover:bg-yellow-500/10 transition cursor-pointer">
+                        Voir le programme
+                    </button>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-8 pt-12">
+                    <div class="space-y-2">
+                        <div class="text-3xl font-bold text-yellow-400">3</div>
+                        <div class="text-sm text-gray-400">Phases d'apprentissage</div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-3xl font-bold text-yellow-400">6</div>
+                        <div class="text-sm text-gray-400">Mois d'accompagnement</div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-3xl font-bold text-yellow-400">80%</div>
+                        <div class="text-sm text-gray-400">Mental vs technique</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POURQUOI CETTE FORMATION -->
+        <section class="py-20 px-6 bg-gradient-to-b from-transparent via-yellow-900/5 to-transparent">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-black mb-12 text-center">Ce qui rend cette formation différente</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-4 p-6 border border-yellow-900/30 rounded-lg bg-yellow-900/10">
+                        <div class="text-3xl">❌</div>
+                        <h3 class="font-bold">Pas de pilule magique</h3>
+                        <p class="text-gray-300">ICT/SMC à la mode souvent piégés. Focus unique sur XAUUSD.</p>
+                    </div>
+
+                    <div class="space-y-4 p-6 border border-yellow-900/30 rounded-lg bg-yellow-900/10">
+                        <div class="text-3xl">📚</div>
+                        <h3 class="font-bold">80% Mental</h3>
+                        <p class="text-gray-300">Le trading c'est avant tout ton cerveau. Pas ta technique.</p>
+                    </div>
+
+                    <div class="space-y-4 p-6 border border-yellow-900/30 rounded-lg bg-yellow-900/10">
+                        <div class="text-3xl">🔥</div>
+                        <h3 class="font-bold">Apprentissage en faisant</h3>
+                        <p class="text-gray-300">Défi démo concret + journal obligatoire. Tu apprends en agissant.</p>
+                    </div>
+
+                    <div class="space-y-4 p-6 border border-yellow-900/30 rounded-lg bg-yellow-900/10">
+                        <div class="text-3xl">👤</div>
+                        <h3 class="font-bold">Accompagnement direct</h3>
+                        <p class="text-gray-300">Feedback sans jugement sur tes trades réels/démo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAMME SECTION -->
+        <section id="programme" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-black mb-16 text-center">Le programme en 3 phases</h2>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Phase 1 -->
+                    <div class="p-8 border border-yellow-900/30 rounded-lg bg-gradient-to-b from-yellow-900/10 to-black hover:border-yellow-500/50 transition">
+                        <div class="space-y-6">
+                            <div>
+                                <div class="text-5xl mb-2">📊</div>
+                                <div class="text-yellow-400 text-sm font-mono mb-2">Phase 1</div>
+                                <h3 class="text-2xl font-bold">Les bases solides & survie</h3>
+                                <p class="text-gray-400 text-sm mt-1">2 à 6 semaines</p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Lire un graphique comme un pro (tendance, supports/résistances, bougies)</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Maîtriser MetaTrader 5, ordres, levier, calcul de lot</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Comprendre accumulation/manipulation/distribution sur l'or</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Astuce perso: repérer zones d'accumulation (75-85% probabilité)</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Défi démo clé: +1 000$ net sur 10k sans descendre sous 9k</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-6 border-t border-yellow-900/30">
+                                <p class="text-yellow-400 font-semibold text-sm">Objectif: Ne plus exploser ton compte, même après 10 pertes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="p-8 border border-yellow-900/30 rounded-lg bg-gradient-to-b from-yellow-900/10 to-black hover:border-yellow-500/50 transition">
+                        <div class="space-y-6">
+                            <div>
+                                <div class="text-5xl mb-2">🧠</div>
+                                <div class="text-yellow-400 text-sm font-mono mb-2">Phase 2</div>
+                                <h3 class="text-2xl font-bold">Forger le mental & discipline</h3>
+                                <p class="text-gray-400 text-sm mt-1">Semaines 4 à 8</p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Gestion du risque pro: 1-2% max par trade</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Contrôler les émotions: pas de revenge, pause après 3 pertes</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Analyse top-down: H4 → timeframes inférieurs</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Zones de liquidité, anciens swing highs/lows</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Style recommandé: petits mouvements 5-30 pips</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-6 border-t border-yellow-900/30">
+                                <p class="text-yellow-400 font-semibold text-sm">Objectif: Trader un processus, pas tes émotions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="p-8 border-2 border-yellow-400 rounded-lg bg-gradient-to-b from-yellow-500/20 to-black shadow-lg shadow-yellow-500/20">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-4 py-1 rounded-full text-xs font-bold">
+                            OUTILS EXCLUSIFS
+                        </div>
+                        <div class="space-y-6 pt-4">
+                            <div>
+                                <div class="text-5xl mb-2">🚀</div>
+                                <div class="text-yellow-400 text-sm font-mono mb-2">Phase 3</div>
+                                <h3 class="text-2xl font-bold">Passage réel & scaling</h3>
+                                <p class="text-gray-400 text-sm mt-1">Après 6-12 semaines</p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Option prop firm: E8 One (1 étape, 5k/10k)</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Ou compte live petit (500$+)</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Continuer journal + feedback personnel</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Soutien 6 mois: questions illimitées, revue de charts</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                    <span class="text-gray-300">Aide psychologique et conseils de scaling</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-300 text-lg flex-shrink-0">🔐</span>
+                                    <span class="text-yellow-300 font-semibold">Mon hedge personnel inclus</span>
+                                </div>
+                                <div class="flex gap-3 text-sm">
+                                    <span class="text-yellow-300 text-lg flex-shrink-0">🤖</span>
+                                    <span class="text-yellow-300 font-semibold">Mon indicateur personnel codé (ta vraie arme)</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-6 border-t border-yellow-900/30">
+                                <p class="text-yellow-400 font-semibold text-sm">Objectif: Prouver que tu tiens en conditions réelles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section class="py-20 px-6 relative">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-black mb-4 text-center">Deux chemins vers la rentabilité</h2>
+                <p class="text-center text-gray-300 mb-8 text-lg">Les deux plans incluent une formation solide. La différence? Le coaching personnel et les outils secrets.</p>
+
+                <div class="mb-12 p-4 bg-yellow-900/20 border border-yellow-500/50 rounded-lg text-center">
+                    <p class="text-sm"><span class="text-yellow-400 font-bold">Les deux offres couvrent les 3 phases du programme.</span> La Mini est compacte avec l'essentiel pour débuter, la Complète ajoute coaching personnalisé + mes outils secrets.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- MINI FORMATION -->
+                    <div class="p-8 border border-yellow-900/50 rounded-lg bg-gradient-to-b from-yellow-900/5 to-black hover:border-yellow-500/50 transition">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-3xl font-black mb-2">Mini Formation</h3>
+                                <p class="text-gray-400 text-sm mb-4">Formation compacte & essentielle pour débuter</p>
+                                <div class="text-4xl font-black text-yellow-400">
+                                    Prix compétitif
+                                    <span class="text-lg text-gray-400 block mt-2">(à discuter via contact)</span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="border-t border-yellow-900/30 pt-4">
+                                    <p class="text-sm font-bold text-yellow-400 mb-4">✓ Ce que tu reçois:</p>
+                                    <ul class="space-y-3">
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Les 3 phases du programme (version compacte)</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Fondamentaux XAUUSD: graphiques, supports/résistances, bougies</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Maîtrise MetaTrader 5, ordres, levier, gestion du risque</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Défis démo + journal d'apprentissage structuré</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Mental & discipline: gérer émotions, patience, stop loss</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Accès communauté (support entre traders)</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Potentiel profits: dès 2-3 mois si tu respectes la discipline</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="border-t border-yellow-900/30 pt-4">
+                                    <p class="text-sm font-bold text-gray-300 mb-4">Différences vs Formation Complète:</p>
+                                    <ul class="space-y-2">
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-gray-400 flex-shrink-0">•</span>
+                                            <span class="text-gray-400">Pas de coaching personnel avec moi</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-gray-400 flex-shrink-0">•</span>
+                                            <span class="text-gray-400">Pas accès à mon hedge personnel (tu utilises la gestion de risque standard)</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-gray-400 flex-shrink-0">•</span>
+                                            <span class="text-gray-400">Pas accès à mon indicateur propriétaire</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-gray-400 flex-shrink-0">•</span>
+                                            <span class="text-gray-400">Support limité (communauté vs accès direct)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button onclick="scrollToSection('contact')" class="block w-full px-6 py-3 border-2 border-yellow-500/50 text-yellow-400 font-bold rounded-lg hover:bg-yellow-500/10 transition text-center cursor-pointer">
+                                En savoir plus →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- FORMATION COMPLÈTE -->
+                    <div class="relative p-8 border-2 border-yellow-400 rounded-lg bg-gradient-to-b from-yellow-900/20 to-black shadow-lg shadow-yellow-500/20 hover:shadow-yellow-500/40 transition">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-4 py-1 rounded-full text-xs font-bold">
+                            ⭐ RECOMMANDÉ
+                        </div>
+
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-3xl font-black mb-2 text-yellow-400">Formation Complète</h3>
+                                <p class="text-gray-400 text-sm mb-4">Accès à TOUT + coaching + mes outils secrets</p>
+                                <div class="text-4xl font-black text-yellow-400">
+                                    Premium
+                                    <span class="text-lg text-gray-400 block mt-2">(tarif personnalisé à discuter)</span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="border-t border-yellow-400/30 pt-4">
+                                    <p class="text-sm font-bold text-yellow-400 mb-4">✓ Ce que tu reçois:</p>
+                                    <ul class="space-y-3">
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Les 3 phases super complètes (formation approfondie)</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Maîtrise avancée: graphiques, patterns, zones de liquidité</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Gestion mentale & psychologique du trading (profond)</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">🔐 Mon hedge personnel (stratégie de protection)</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">🤖 Mon indicateur propriétaire codé</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Coaching personnalisé 6 mois</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Revue complète de tes trades réels</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Accès direct pour questions illimitées</span>
+                                        </li>
+                                        <li class="flex gap-3 text-sm">
+                                            <span class="text-yellow-400 flex-shrink-0">✓</span>
+                                            <span class="text-gray-300">Support psychologique + scaling conseils</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-yellow-500/10 border border-yellow-500/50 rounded p-4 mt-4">
+                                    <p class="text-yellow-400 font-bold text-sm">🎯 Idéal si tu veux une vraie transformation rapide avec quelqu'un qui te guide au jour le jour</p>
+                                </div>
+                            </div>
+
+                            <button onclick="scrollToSection('contact')" class="block w-full px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-500/50 transition text-center cursor-pointer">
+                                Démarrer avec moi →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparaison rapide -->
+                <div class="mt-12 p-8 border border-yellow-900/50 rounded-lg bg-yellow-900/10">
+                    <h3 class="font-black mb-6 text-center text-lg">Résumé: Quelle offre pour toi?</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <p class="text-yellow-400 font-bold mb-3">Mini Formation si:</p>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>✓ Tu es débutant et veux apprendre les bases solides</li>
+                                <li>✓ Tu peux être autonome et t'engager sérieusement</li>
+                                <li>✓ Tu veux une formation compacte & essentielle</li>
+                                <li>✓ Tu peux devenir profitable en 2-3 mois avec discipline</li>
+                                <li>✓ Tu as un budget restreint</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-yellow-400 font-bold mb-3">Formation Complète si:</p>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>✓ Tu veux les résultats les plus rapides possibles</li>
+                                <li>✓ Tu veux du feedback personnel & coaching direct</li>
+                                <li>✓ Tu veux accès à mes outils secrets (hedge + indicateur)</li>
+                                <li>✓ Tu veux une vrai relation de mentorat 6 mois</li>
+                                <li>✓ Tu es prêt à investir pour transformer ta vie</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUTILS EXCLUSIFS SECTION -->
+        <section class="py-20 px-6 bg-gradient-to-r from-yellow-900/30 via-black to-yellow-900/30 border-y border-yellow-900/50 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-1/2 left-1/4 text-yellow-400 text-8xl font-bold opacity-20">💎</div>
+                <div class="absolute top-1/2 right-1/4 text-yellow-400 text-8xl font-bold opacity-20">⚙️</div>
+            </div>
+
+            <div class="max-w-5xl mx-auto relative z-10">
+                <h2 class="text-4xl font-black mb-4 text-center">Les armes secrètes</h2>
+                <p class="text-center text-gray-300 mb-12 text-lg">Ce que tu obtiens que personne d'autre ne possède</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Hedge Personnel -->
+                    <div class="p-8 border-2 border-yellow-400/50 rounded-lg bg-black/50 backdrop-blur hover:border-yellow-400 transition">
+                        <div class="space-y-4">
+                            <div class="text-5xl">🔐</div>
+                            <h3 class="text-2xl font-black">Mon Hedge Personnel</h3>
+                            <p class="text-gray-300">
+                                La stratégie de protection de capital qui me permet de trader avec confiance. Tu vas apprendre exactement comment je protège mon compte et mes gains, indépendamment du marché.
+                            </p>
+                            <div class="pt-4 border-t border-yellow-900/50">
+                                <p class="text-yellow-400 font-bold text-sm">✓ Inclus à la Phase 3</p>
+                                <p class="text-gray-400 text-xs mt-2">Valeur estimée: priceless (cette stratégie m'a sauvé des milliers)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Indicateur Personnalisé -->
+                    <div class="p-8 border-2 border-yellow-400/50 rounded-lg bg-black/50 backdrop-blur hover:border-yellow-400 transition">
+                        <div class="space-y-4">
+                            <div class="text-5xl">🤖</div>
+                            <h3 class="text-2xl font-black">Mon Indicateur Codé</h3>
+                            <p class="text-gray-300">
+                                Un outil propriétaire que j'ai développé et testé pendant mois. C'est ta vraie arme - elle te montre ce que les autres traders ne voient pas sur les graphiques.
+                            </p>
+                            <div class="pt-4 border-t border-yellow-900/50">
+                                <p class="text-yellow-400 font-bold text-sm">✓ Inclus à la Phase 3</p>
+                                <p class="text-gray-400 text-xs mt-2">+ Formation complète sur comment l'utiliser au quotidien</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-6 bg-gradient-to-r from-yellow-500/20 to-yellow-900/20 border border-yellow-500/50 rounded-lg">
+                    <p class="text-center text-white font-semibold">
+                        Ces deux outils combinés = <span class="text-yellow-400">ta méthode personnalisée pour être profitable et consistant</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 px-6 bg-gradient-to-b from-transparent to-yellow-900/10">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-4xl font-black mb-4 text-center">Prêt à commencer?</h2>
+                <p class="text-center text-gray-400 mb-12">Contacte-moi directement pour démarrer ta transformation.</p>
+
+                <div class="space-y-6">
+                    <!-- Email Option -->
+                    <div class="p-6 border-2 border-yellow-900/30 rounded-lg cursor-pointer transition hover:border-yellow-400 hover:bg-yellow-900/20">
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl">📧</div>
+                            <div>
+                                <div class="font-bold">Email direct</div>
+                                <div class="text-yellow-400 font-mono text-sm"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3d53585259494f5c5954535a7d5a505c5451135e5250">[email&#160;protected]</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Telegram Option -->
+                    <div class="p-6 border-2 border-yellow-900/30 rounded-lg cursor-pointer transition hover:border-yellow-400 hover:bg-yellow-900/20">
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl">✈️</div>
+                            <div>
+                                <div class="font-bold">Telegram (plus rapide)</div>
+                                <div class="text-yellow-400 font-mono text-sm">@yashysako</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="grid md:grid-cols-2 gap-4 pt-6">
+                        <a href="/cdn-cgi/l/email-protection#ea848f858e9e988b8e83848daa8d878b8386c4898587d5999f88808f899ed7ac8598878b9e838584cfd8dabe988b8e83848dcfd8dab2abbfbfb9ae" class="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-500/50 transition transform hover:scale-105 text-center">
+                            Envoyer un email →
+                        </a>
+                        <a href="https://t.me/yashysako" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-500/50 transition transform hover:scale-105 text-center">
+                            Ouvrir Telegram →
+                        </a>
+                    </div>
+
+                    <p class="text-center text-sm text-gray-400">
+                        Mentionne "Formation XAUUSD" pour une réponse plus rapide
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="border-t border-yellow-900/30 py-8 px-6 bg-black/50">
+            <div class="max-w-6xl mx-auto text-center text-gray-400 text-sm">
+                <p>Si tu es patient, discipliné et prêt à travailler ton mental...</p>
+                <p class="mt-2 text-yellow-400 font-semibold">Cette formation te met sur les rails pour devenir consistant sur l'or.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728
