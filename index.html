@@ -140,12 +140,16 @@
                         <div class="text-xs font-medium tracking-widest" style="color:#F97316;">TRADING</div>
                     </div>
                 </div>
-                <nav class="hidden md:flex gap-8">
-                    <button onclick="scrollToSection('apropos')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300">À propos</button>
-                    <button onclick="scrollToSection('programme')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300">Programme</button>
-                    <button onclick="scrollToSection('indicateurs')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300">Indicateurs</button>
+                <nav class="hidden md:flex gap-8 items-center">
+                    <button onclick="scrollToSection('apropos')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300" data-fr="À propos" data-en="About">À propos</button>
+                    <button onclick="scrollToSection('programme')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300" data-fr="Programme" data-en="Program">Programme</button>
+                    <button onclick="scrollToSection('indicateurs')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300" data-fr="Indicateurs" data-en="Indicators">Indicateurs</button>
                     <button onclick="scrollToSection('faq')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300">FAQ</button>
-                    <button onclick="scrollToSection('contact')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300">Contact</button>
+                    <button onclick="scrollToSection('contact')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300" data-fr="Contact" data-en="Contact">Contact</button>
+                    <!-- Language toggle -->
+                    <button onclick="toggleLang()" id="lang-btn" class="text-xs font-bold px-3 py-1 rounded-full transition cursor-pointer" style="border:1px solid rgba(234,88,12,0.6);color:#F97316;background:rgba(234,88,12,0.1);">
+                        🌐 EN
+                    </button>
                 </nav>
             </div>
         </header>
@@ -251,22 +255,22 @@
                 </div>
 
                 <div class="space-y-4">
-                    <div class="inline-block px-4 py-2 rounded-full text-sm font-mono" style="border:1px solid rgba(234,88,12,0.5);color:#F97316;">
+                    <div class="inline-block px-4 py-2 rounded-full text-sm font-mono" style="border:1px solid rgba(234,88,12,0.5);color:#F97316;" data-i18n="hero-badge">
                         Formation complète Forex, Commodités &amp; Métaux
                     </div>
-                    <h1 class="text-5xl md:text-6xl font-black leading-tight">
+                    <h1 class="text-5xl md:text-6xl font-black leading-tight" data-i18n="hero-h1">
                         Du chaos <span class="text-fire">à la consistance</span>
                     </h1>
-                    <p class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    <p class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed" data-i18n="hero-desc">
                         Maîtrisez le trading sur tous les marchés avec une formation structurée, un mental en béton et un accompagnement direct.
                     </p>
                 </div>
 
                 <div class="flex flex-col md:flex-row gap-4 justify-center pt-4">
-                    <button onclick="scrollToSection('contact')" class="btn-fire px-8 py-4 cursor-pointer">
+                    <button onclick="scrollToSection('contact')" class="btn-fire px-8 py-4 cursor-pointer" data-i18n="hero-btn1">
                         Commencer maintenant →
                     </button>
-                    <button onclick="scrollToSection('programme')" class="btn-outline-fire px-8 py-4 cursor-pointer font-semibold">
+                    <button onclick="scrollToSection('programme')" class="btn-outline-fire px-8 py-4 cursor-pointer font-semibold" data-i18n="hero-btn2">
                         Voir le programme
                     </button>
                 </div>
@@ -274,15 +278,15 @@
                 <div class="grid grid-cols-3 gap-8 pt-8">
                     <div class="space-y-2">
                         <div class="text-3xl font-bold text-fire">3</div>
-                        <div class="text-sm text-gray-400">Phases d'apprentissage</div>
+                        <div class="text-sm text-gray-400" data-i18n="hero-stat1">Phases d'apprentissage</div>
                     </div>
                     <div class="space-y-2">
                         <div class="text-3xl font-bold text-fire">6</div>
-                        <div class="text-sm text-gray-400">Mois d'accompagnement</div>
+                        <div class="text-sm text-gray-400" data-i18n="hero-stat2">Mois d'accompagnement</div>
                     </div>
                     <div class="space-y-2">
                         <div class="text-3xl font-bold text-fire">7</div>
-                        <div class="text-sm text-gray-400">Ans de connaissance</div>
+                        <div class="text-sm text-gray-400" data-i18n="hero-stat3">Ans de connaissance</div>
                     </div>
                 </div>
             </div>
@@ -305,22 +309,22 @@
                 </svg>
             </div>
             <div class="max-w-5xl mx-auto relative z-10">
-                <h2 class="text-4xl font-black mb-12 text-center">À propos</h2>
+                <h2 class="text-4xl font-black mb-12 text-center" data-i18n="apropos-title">À propos</h2>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="space-y-6">
                         <div>
                             <h3 class="text-3xl font-black mb-2" style="color:#F97316;">Samuel Damours</h3>
-                            <p class="text-xl font-semibold text-gray-300">Trader indépendant – EmberTrading</p>
-                            <p class="text-lg mt-1" style="color:#F97316;">Passionné des marchés financiers depuis début 2019</p>
-                            <p class="text-lg font-semibold" style="color:#FBBF24;">Profitable de manière consistante depuis 3 ans</p>
+                            <p class="text-xl font-semibold text-gray-300" data-i18n="apropos-subtitle">Trader indépendant – EmberTrading</p>
+                            <p class="text-lg mt-1" style="color:#F97316;" data-i18n="apropos-since">Passionné des marchés financiers depuis début 2019</p>
+                            <p class="text-lg font-semibold" style="color:#FBBF24;" data-i18n="apropos-profitable">Profitable de manière consistante depuis 3 ans</p>
                         </div>
                         <div class="pl-6 space-y-4" style="border-left:4px solid #EA580C;">
-                            <p class="text-gray-300 leading-relaxed">J'ai commencé à m'intéresser sérieusement au trading en 2019. Après plusieurs années d'apprentissage, d'erreurs et d'optimisations, je trade de façon rentable et disciplinée depuis 3 ans.</p>
-                            <p class="text-gray-300 leading-relaxed">Fondateur d'EmberTrading, je partage mon approche axée sur <span style="color:#F97316;font-weight:600;">la gestion du risque stricte, l'edge statistique et la constance sur le long terme.</span></p>
+                            <p class="text-gray-300 leading-relaxed" data-i18n="apropos-p1">J'ai commencé à m'intéresser sérieusement au trading en 2019. Après plusieurs années d'apprentissage, d'erreurs et d'optimisations, je trade de façon rentable et disciplinée depuis 3 ans.</p>
+                            <p class="text-gray-300 leading-relaxed" data-i18n="apropos-p2">Fondateur d'EmberTrading, je partage mon approche axée sur <span style="color:#F97316;font-weight:600;">la gestion du risque stricte, l'edge statistique et la constance sur le long terme.</span></p>
                         </div>
                         <div class="p-6 rounded-lg" style="background:rgba(234,88,12,0.1);border:1px solid rgba(234,88,12,0.4);">
-                            <p class="font-semibold text-sm" style="color:#F97316;">💡 Philosophie</p>
-                            <p class="text-gray-300 text-sm mt-2">80% mental, 20% technique. La différence entre un trader rentable et un trader non rentable réside dans la psychologie et la discipline.</p>
+                            <p class="font-semibold text-sm" style="color:#F97316;" data-i18n="apropos-philo-label">💡 Philosophie</p>
+                            <p class="text-gray-300 text-sm mt-2" data-i18n="apropos-philo-text">80% mental, 20% technique. La différence entre un trader rentable et un trader non rentable réside dans la psychologie et la discipline.</p>
                         </div>
                     </div>
                     <div class="flex justify-center items-center">
@@ -384,27 +388,27 @@
                 </svg>
             </div>
             <div class="max-w-4xl mx-auto relative z-10">
-                <h2 class="text-4xl font-black mb-12 text-center">Ce qui rend cette formation différente</h2>
+                <h2 class="text-4xl font-black mb-12 text-center" data-i18n="diff-title">Ce qui rend cette formation différente</h2>
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="card-fire p-6 space-y-4">
                         <div class="text-3xl">❌</div>
-                        <h3 class="font-bold">Pas de technique à la mode</h3>
-                        <p class="text-gray-300 text-sm">Nous vous apportons les outils pour créer votre propre technique de trading. Nous n'essayons pas de vous vendre une technique à la mode.</p>
+                        <h3 class="font-bold" data-i18n="diff-1-title">Pas de technique à la mode</h3>
+                        <p class="text-gray-300 text-sm" data-i18n="diff-1-text">Nous vous apportons les outils pour créer votre propre technique de trading. Nous n'essayons pas de vous vendre une technique à la mode.</p>
                     </div>
                     <div class="card-fire p-6 space-y-4">
                         <div class="text-3xl">📚</div>
-                        <h3 class="font-bold">L'importance de la psychologie</h3>
-                        <p class="text-gray-300 text-sm">Nous mettons beaucoup l'emphase sur la psychologie pour que vous développiez un bon risk management.</p>
+                        <h3 class="font-bold" data-i18n="diff-2-title">L'importance de la psychologie</h3>
+                        <p class="text-gray-300 text-sm" data-i18n="diff-2-text">Nous mettons beaucoup l'emphase sur la psychologie pour que vous développiez un bon risk management.</p>
                     </div>
                     <div class="card-fire p-6 space-y-4">
                         <div class="text-3xl">🔥</div>
-                        <h3 class="font-bold">Apprentissage par la pratique</h3>
-                        <p class="text-gray-300 text-sm">Défi démo concret avec journal obligatoire. Vous apprenez en agissant, pas en théorie.</p>
+                        <h3 class="font-bold" data-i18n="diff-3-title">Apprentissage par la pratique</h3>
+                        <p class="text-gray-300 text-sm" data-i18n="diff-3-text">Défi démo concret avec journal obligatoire. Vous apprenez en agissant, pas en théorie.</p>
                     </div>
                     <div class="card-fire p-6 space-y-4">
                         <div class="text-3xl">👤</div>
-                        <h3 class="font-bold">Accompagnement personnalisé</h3>
-                        <p class="text-gray-300 text-sm">Feedback sans jugement sur vos trades réels et démo. Je reste présent pour répondre à vos questions.</p>
+                        <h3 class="font-bold" data-i18n="diff-4-title">Accompagnement personnalisé</h3>
+                        <p class="text-gray-300 text-sm" data-i18n="diff-4-text">Feedback sans jugement sur vos trades réels et démo. Je reste présent pour répondre à vos questions.</p>
                     </div>
                 </div>
             </div>
@@ -421,28 +425,28 @@
                 </svg>
             </div>
             <div class="max-w-6xl mx-auto relative z-10">
-                <h2 class="text-4xl font-black mb-16 text-center">Le programme en 3 phases</h2>
+                <h2 class="text-4xl font-black mb-16 text-center" data-i18n="prog-title">Le programme en 3 phases</h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Phase 1 -->
                     <div class="card-fire p-8">
                         <div class="space-y-6">
                             <div>
                                 <div class="text-5xl mb-2">📊</div>
-                                <div class="text-sm font-mono mb-2" style="color:#F97316;">Phase 1</div>
-                                <h3 class="text-2xl font-bold">Les bases solides et survie</h3>
-                                <p class="text-gray-400 text-sm mt-1">2 à 6 semaines</p>
+                                <div class="text-sm font-mono mb-2" style="color:#F97316;" data-i18n="phase1-label">Phase 1</div>
+                                <h3 class="text-2xl font-bold" data-i18n="phase1-title">Les bases solides et survie</h3>
+                                <p class="text-gray-400 text-sm mt-1" data-i18n="phase1-duration">2 à 6 semaines</p>
                             </div>
                             <div class="space-y-3">
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Lire un graphique (tendance, supports/résistances, bougies)</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Maîtriser MetaTrader 5, ordres, levier, calcul de lot</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Comprendre les sessions (Asia, Europe, US)</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Identifier les heures d'ouverture optimales pour chaque paire/marché</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Comprendre accumulation/manipulation/<br>distribution</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Astuce: repérer les zones d'accumulation</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Défi démo clé: +1 000$ net sur 10k sans descendre sous 9k</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase1-item1">Lire un graphique (tendance, supports/résistances, bougies)</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase1-item2">Maîtriser MetaTrader 5, ordres, levier, calcul de lot</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase1-item3">Comprendre les sessions (Asia, Europe, US)</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase1-item4">Identifier les heures d'ouverture optimales pour chaque paire/marché</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase1-item5">Comprendre accumulation/manipulation/<br>distribution</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase1-item6">Astuce: repérer les zones d'accumulation</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase1-item7">Défi démo clé: +1 000$ net sur 10k sans descendre sous 9k</span></div>
                             </div>
                             <div class="pt-6 border-t border-orange-900/30">
-                                <p class="font-semibold text-sm" style="color:#F97316;">Objectif: Ne plus faire exploser votre compte, même après 10 pertes</p>
+                                <p class="font-semibold text-sm" style="color:#F97316;" data-i18n="phase1-goal">Objectif: Ne plus faire exploser votre compte, même après 10 pertes</p>
                             </div>
                         </div>
                     </div>
@@ -452,20 +456,20 @@
                         <div class="space-y-6">
                             <div>
                                 <div class="text-5xl mb-2">🧠</div>
-                                <div class="text-sm font-mono mb-2" style="color:#F97316;">Phase 2</div>
-                                <h3 class="text-2xl font-bold">Forger le mental et discipline</h3>
-                                <p class="text-gray-400 text-sm mt-1">Semaines 4 à 8</p>
+                                <div class="text-sm font-mono mb-2" style="color:#F97316;" data-i18n="phase2-label">Phase 2</div>
+                                <h3 class="text-2xl font-bold" data-i18n="phase2-title">Forger le mental et discipline</h3>
+                                <p class="text-gray-400 text-sm mt-1" data-i18n="phase2-duration">Semaines 4 à 8</p>
                             </div>
                             <div class="space-y-3">
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Gestion du risque: 1-2% max par trade</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Contrôler les émotions: pas de revenge, pause après 3 pertes</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Analyse top-down: H4 → timeframes inférieurs</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Zones de liquidité, anciens swing highs/lows</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Trader pendant les sessions optimales</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Style recommandé: petits mouvements 5-30 pips</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase2-item1">Gestion du risque: 1-2% max par trade</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase2-item2">Contrôler les émotions: pas de revenge, pause après 3 pertes</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase2-item3">Analyse top-down: H4 → timeframes inférieurs</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase2-item4">Zones de liquidité, anciens swing highs/lows</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase2-item5">Trader pendant les sessions optimales</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase2-item6">Style recommandé: petits mouvements 5-30 pips</span></div>
                             </div>
                             <div class="pt-6 border-t border-orange-900/30">
-                                <p class="font-semibold text-sm" style="color:#F97316;">Objectif: Trader un processus, pas vos émotions</p>
+                                <p class="font-semibold text-sm" style="color:#F97316;" data-i18n="phase2-goal">Objectif: Trader un processus, pas vos émotions</p>
                             </div>
                         </div>
                     </div>
@@ -475,21 +479,21 @@
                         <div class="space-y-6">
                             <div>
                                 <div class="text-5xl mb-2">🚀</div>
-                                <div class="text-sm font-mono mb-2" style="color:#FBBF24;">Phase 3</div>
-                                <h3 class="text-2xl font-bold">Passage réel et scaling</h3>
-                                <p class="text-gray-400 text-sm mt-1">Après 6-12 semaines</p>
+                                <div class="text-sm font-mono mb-2" style="color:#FBBF24;" data-i18n="phase3-label">Phase 3</div>
+                                <h3 class="text-2xl font-bold" data-i18n="phase3-title">Passage réel et scaling</h3>
+                                <p class="text-gray-400 text-sm mt-1" data-i18n="phase3-duration">Après 6-12 semaines</p>
                             </div>
                             <div class="space-y-3">
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Passage à la réalité: Prop firm ou compte live</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Journal de trading continu et feedback personnalisé</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Soutien 6 mois: questions illimitées, revue de charts</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Optimisation des sessions: vos meilleures heures</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Accompagnement psychologique et conseils de scaling</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#FBBF24;" class="text-lg flex-shrink-0">🔐</span><span class="font-semibold" style="color:#FBBF24;">Mon edge personnel: ma technique de trading</span></div>
-                                <div class="flex gap-3 text-sm"><span style="color:#FBBF24;" class="text-lg flex-shrink-0">🤖</span><span class="font-semibold" style="color:#FBBF24;">Mon indicateur personnel codé que j'utilise</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase3-item1">Passage à la réalité: Prop firm ou compte live</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase3-item2">Journal de trading continu et feedback personnalisé</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase3-item3">Soutien 6 mois: questions illimitées, revue de charts</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase3-item4">Optimisation des sessions: vos meilleures heures</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="phase3-item5">Accompagnement psychologique et conseils de scaling</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#FBBF24;" class="text-lg flex-shrink-0">🔐</span><span class="font-semibold" style="color:#FBBF24;" data-i18n="phase3-item6">Mon edge personnel: ma technique de trading</span></div>
+                                <div class="flex gap-3 text-sm"><span style="color:#FBBF24;" class="text-lg flex-shrink-0">🤖</span><span class="font-semibold" style="color:#FBBF24;" data-i18n="phase3-item7">Mon indicateur personnel codé que j'utilise</span></div>
                             </div>
                             <div class="pt-6 border-t border-orange-900/30">
-                                <p class="font-semibold text-sm" style="color:#F97316;">Objectif: Prouver que vous tenez en conditions réelles</p>
+                                <p class="font-semibold text-sm" style="color:#F97316;" data-i18n="phase3-goal">Objectif: Prouver que vous tenez en conditions réelles</p>
                             </div>
                         </div>
                     </div>
@@ -502,10 +506,10 @@
         <!-- ═══════════ PRICING ═══════════ -->
         <section class="py-20 px-6 relative">
             <div class="max-w-6xl mx-auto relative z-10">
-                <h2 class="text-4xl font-black mb-4 text-center">Deux chemins vers la rentabilité</h2>
-                <p class="text-center text-gray-300 mb-8 text-lg">Les deux plans incluent une formation solide. La différence? Le coaching personnel et les outils secrets.</p>
+                <h2 class="text-4xl font-black mb-4 text-center" data-i18n="pricing-title">Deux chemins vers la rentabilité</h2>
+                <p class="text-center text-gray-300 mb-8 text-lg" data-i18n="pricing-subtitle">Les deux plans incluent une formation solide. La différence? Le coaching personnel et les outils secrets.</p>
                 <div class="mb-12 p-4 rounded-lg text-center" style="background:rgba(234,88,12,0.1);border:1px solid rgba(234,88,12,0.4);">
-                    <p class="text-sm"><span class="font-bold" style="color:#F97316;">Les deux offres couvrent les 3 phases du programme.</span> La Compacte est compacte avec l'essentiel, la Complète ajoute coaching personnalisé + mes outils secrets.</p>
+                    <p class="text-sm" data-i18n="pricing-note"><span class="font-bold" style="color:#F97316;">Les deux offres couvrent les 3 phases du programme.</span> La Compacte est compacte avec l'essentiel, la Complète ajoute coaching personnalisé + mes outils secrets.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
@@ -513,38 +517,38 @@
                     <div class="card-fire p-8">
                         <div class="space-y-6">
                             <div>
-                                <h3 class="text-3xl font-black mb-2">Formation Compacte</h3>
-                                <p class="text-gray-400 text-sm mb-4">Formation compacte et essentielle pour débuter</p>
+                                <h3 class="text-3xl font-black mb-2" data-i18n="compact-title">Formation Compacte</h3>
+                                <p class="text-gray-400 text-sm mb-4" data-i18n="compact-desc">Formation compacte et essentielle pour débuter</p>
                                 <div class="text-5xl font-black mb-2 text-fire">500$</div>
-                                <p class="text-gray-400 text-sm">Paiement unique - Accès illimité</p>
+                                <p class="text-gray-400 text-sm" data-i18n="compact-payment">Paiement unique - Accès illimité</p>
                             </div>
                             <div class="space-y-4">
                                 <div class="border-t border-orange-900/30 pt-4">
-                                    <p class="text-sm font-bold mb-4" style="color:#F97316;">✓ Ce que vous recevez:</p>
+                                    <p class="text-sm font-bold mb-4" style="color:#F97316;" data-i18n="compact-what">✓ Ce que vous recevez:</p>
                                     <ul class="space-y-3">
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Les 3 phases du programme (version compacte)</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Fondamentaux multi-marchés: graphiques, supports/résistances, bougies</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Maîtrise MetaTrader 5, ordres, levier, gestion du risque</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Défis démo + journal d'apprentissage structuré</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Mental et discipline: gérer les émotions, patience, stop loss</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Support direct - je reste présent pour répondre à vos questions</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="compact-item1">Les 3 phases du programme (version compacte)</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="compact-item2">Fondamentaux multi-marchés: graphiques, supports/résistances, bougies</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="compact-item3">Maîtrise MetaTrader 5, ordres, levier, gestion du risque</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="compact-item4">Défis démo + journal d'apprentissage structuré</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="compact-item5">Mental et discipline: gérer les émotions, patience, stop loss</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="compact-item6">Support direct - je reste présent pour répondre à vos questions</span></li>
                                     </ul>
                                 </div>
                                 <div class="border-t border-orange-900/30 pt-4">
-                                    <p class="text-sm font-bold text-gray-300 mb-4">Différences vs Formation Complète:</p>
+                                    <p class="text-sm font-bold text-gray-300 mb-4" data-i18n="compact-diff-title">Différences vs Formation Complète:</p>
                                     <ul class="space-y-2">
-                                        <li class="flex gap-3 text-sm"><span class="text-gray-500 flex-shrink-0">•</span><span class="text-gray-400">Pas de coaching personnalisé approfondi</span></li>
-                                        <li class="flex gap-3 text-sm"><span class="text-gray-500 flex-shrink-0">•</span><span class="text-gray-400">Pas accès à ma technique de trading personnelle</span></li>
-                                        <li class="flex gap-3 text-sm"><span class="text-gray-500 flex-shrink-0">•</span><span class="text-gray-400">Pas accès à mon indicateur propriétaire</span></li>
-                                        <li class="flex gap-3 text-sm"><span class="text-gray-500 flex-shrink-0">•</span><span class="text-gray-400">Moins de contenu et d'outils avancés</span></li>
+                                        <li class="flex gap-3 text-sm"><span class="text-gray-500 flex-shrink-0">•</span><span class="text-gray-400" data-i18n="compact-diff1">Pas de coaching personnalisé approfondi</span></li>
+                                        <li class="flex gap-3 text-sm"><span class="text-gray-500 flex-shrink-0">•</span><span class="text-gray-400" data-i18n="compact-diff2">Pas accès à ma technique de trading personnelle</span></li>
+                                        <li class="flex gap-3 text-sm"><span class="text-gray-500 flex-shrink-0">•</span><span class="text-gray-400" data-i18n="compact-diff3">Pas accès à mon indicateur propriétaire</span></li>
+                                        <li class="flex gap-3 text-sm"><span class="text-gray-500 flex-shrink-0">•</span><span class="text-gray-400" data-i18n="compact-diff4">Moins de contenu et d'outils avancés</span></li>
                                     </ul>
                                 </div>
                             </div>
                             <button onclick="scrollToSection('contact')" class="block w-full px-6 py-3 btn-outline-fire font-bold text-center cursor-pointer mb-3">
-                                En savoir plus →
+                                <span data-i18n="compact-btn1">En savoir plus →</span>
                             </button>
                             <a href="https://buy.stripe.com/8x2eVcfwifmB6fs7QX4ko00" target="_blank" rel="noopener noreferrer" class="btn-fire block w-full px-6 py-3 text-center">
-                                Acheter maintenant - 500$ →
+                                <span data-i18n="compact-btn2">Acheter maintenant - 500$ →</span>
                             </a>
                         </div>
                     </div>
@@ -552,38 +556,38 @@
                     <!-- COMPLÈTE -->
                     <div class="card-fire-featured p-8 relative">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold text-white" style="background:linear-gradient(135deg,#DC2626,#EA580C,#F59E0B);">
-                            ⭐ RECOMMANDÉ
+                            <span data-i18n="recommended">⭐ RECOMMANDÉ</span>
                         </div>
                         <div class="space-y-6">
                             <div>
-                                <h3 class="text-3xl font-black mb-2" style="color:#F97316;">Formation Complète</h3>
-                                <p class="text-gray-400 text-sm mb-4">Contenu approfondi, coaching personnel et tous mes outils</p>
+                                <h3 class="text-3xl font-black mb-2" style="color:#F97316;" data-i18n="complete-title">Formation Complète</h3>
+                                <p class="text-gray-400 text-sm mb-4" data-i18n="complete-desc">Contenu approfondi, coaching personnel et tous mes outils</p>
                                 <div class="text-5xl font-black mb-2 text-fire">1000$</div>
-                                <p class="text-gray-400 text-sm">Paiement unique - Accès illimité + Coaching 6 mois</p>
+                                <p class="text-gray-400 text-sm" data-i18n="complete-payment">Paiement unique - Accès illimité + Coaching 6 mois</p>
                             </div>
                             <div class="space-y-4">
                                 <div class="border-t border-orange-900/30 pt-4">
                                     <p class="text-sm font-bold mb-4" style="color:#F97316;">✓ Ce que vous recevez:</p>
                                     <ul class="space-y-3">
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Les 3 phases complètes avec beaucoup plus de contenu</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Formation adaptée au total débutant ET aux traders avancés</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Maîtrise avancée: graphiques, patterns, zones de liquidité</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Gestion mentale et psychologique du trading (approfondie)</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">🔐 Mon edge personnel (technique et gestion psychologique)</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">🤖 Mon indicateur propriétaire que j'utilise</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Coaching personnalisé 6 mois</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Revue complète de vos trades réels</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Accès direct avec questions illimitées</span></li>
-                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Support psychologique et conseils de scaling</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item1">Les 3 phases complètes avec beaucoup plus de contenu</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item2">Formation adaptée au total débutant ET aux traders avancés</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item3">Maîtrise avancée: graphiques, patterns, zones de liquidité</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item4">Gestion mentale et psychologique du trading (approfondie)</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item5">🔐 Mon edge personnel (technique et gestion psychologique)</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item6">🤖 Mon indicateur propriétaire que j'utilise</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item7">Coaching personnalisé 6 mois</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item8">Revue complète de vos trades réels</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item9">Accès direct avec questions illimitées</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item10">Support psychologique et conseils de scaling</span></li>
                                     </ul>
                                 </div>
                                 <div class="rounded p-4 mt-4" style="background:rgba(234,88,12,0.12);border:1px solid rgba(234,88,12,0.4);">
-                                    <p class="font-bold text-sm" style="color:#F97316;">🤖 L'indicateur propriétaire est inclus dans le prix</p>
-                                    <p class="text-gray-300 text-xs mt-2">Formation complète sur son utilisation quotidienne</p>
+                                    <p class="font-bold text-sm" style="color:#F97316;" data-i18n="complete-indicator-label">🤖 L'indicateur propriétaire est inclus dans le prix</p>
+                                    <p class="text-gray-300 text-xs mt-2" data-i18n="complete-indicator-text">Formation complète sur son utilisation quotidienne</p>
                                 </div>
                             </div>
                             <a href="https://buy.stripe.com/8x2eVcfwifmB6fs7QX4ko00" target="_blank" rel="noopener noreferrer" class="btn-fire block w-full px-6 py-3 text-center font-bold">
-                                Acheter maintenant - 1000$ →
+                                <span data-i18n="complete-btn">Acheter maintenant - 1000$ →</span>
                             </a>
                         </div>
                     </div>
@@ -591,25 +595,25 @@
 
                 <!-- Comparaison -->
                 <div class="mt-12 p-8 rounded-lg" style="border:1px solid rgba(234,88,12,0.3);background:rgba(234,88,12,0.05);">
-                    <h3 class="font-black mb-6 text-center text-lg">Résumé: Quelle offre pour vous?</h3>
+                    <h3 class="font-black mb-6 text-center text-lg" data-i18n="compare-title">Résumé: Quelle offre pour vous?</h3>
                     <div class="grid md:grid-cols-2 gap-8">
                         <div>
-                            <p class="font-bold mb-3" style="color:#F97316;">Formation Compacte - 500$</p>
+                            <p class="font-bold mb-3" style="color:#F97316;" data-i18n="compare-compact-title">Formation Compacte - 500$</p>
                             <ul class="space-y-2 text-sm text-gray-300">
-                                <li>✓ Vous êtes débutant et voulez apprendre les bases solides</li>
-                                <li>✓ Vous pouvez être autonome et vous engager sérieusement</li>
-                                <li>✓ Vous voulez une formation compacte et essentielle</li>
-                                <li>✓ Vous avez un budget restreint</li>
+                                <li data-i18n="compare-compact1">✓ Vous êtes débutant et voulez apprendre les bases solides</li>
+                                <li data-i18n="compare-compact2">✓ Vous pouvez être autonome et vous engager sérieusement</li>
+                                <li data-i18n="compare-compact3">✓ Vous voulez une formation compacte et essentielle</li>
+                                <li data-i18n="compare-compact4">✓ Vous avez un budget restreint</li>
                             </ul>
                         </div>
                         <div>
-                            <p class="font-bold mb-3" style="color:#F97316;">Formation Complète - 1000$</p>
+                            <p class="font-bold mb-3" style="color:#F97316;" data-i18n="compare-complete-title">Formation Complète - 1000$</p>
                             <ul class="space-y-2 text-sm text-gray-300">
-                                <li>✓ Vous voulez les résultats les plus rapides possibles</li>
-                                <li>✓ Vous voulez du feedback personnel et coaching direct</li>
-                                <li>✓ Vous voulez accès à mes outils (edge et indicateur)</li>
-                                <li>✓ Vous voulez une véritable relation de mentorat 6 mois</li>
-                                <li>✓ Vous êtes prêt à investir pour transformer votre vie</li>
+                                <li data-i18n="compare-complete1">✓ Vous voulez les résultats les plus rapides possibles</li>
+                                <li data-i18n="compare-complete2">✓ Vous voulez du feedback personnel et coaching direct</li>
+                                <li data-i18n="compare-complete3">✓ Vous voulez accès à mes outils (edge et indicateur)</li>
+                                <li data-i18n="compare-complete4">✓ Vous voulez une véritable relation de mentorat 6 mois</li>
+                                <li data-i18n="compare-complete5">✓ Vous êtes prêt à investir pour transformer votre vie</li>
                             </ul>
                         </div>
                     </div>
@@ -628,8 +632,8 @@
                 </svg>
             </div>
             <div class="max-w-6xl mx-auto relative z-10">
-                <h2 class="text-4xl font-black mb-4 text-center">Mes Indicateurs de Trading</h2>
-                <p class="text-center text-gray-300 mb-12 text-lg">Des outils développés et optimisés à partir de mon expérience réelle sur les marchés</p>
+                <h2 class="text-4xl font-black mb-4 text-center" data-i18n="ind-title">Mes Indicateurs de Trading</h2>
+                <p class="text-center text-gray-300 mb-12 text-lg" data-i18n="ind-subtitle">Des outils développés et optimisés à partir de mon expérience réelle sur les marchés</p>
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Indicateur 1 -->
@@ -644,22 +648,22 @@
                                     <span class="feature-tag" style="background:rgba(168,85,247,0.15);color:#c084fc;border:1px solid rgba(168,85,247,0.3);">FVG Detection</span>
                                 </div>
                             </div>
-                            <p class="text-gray-300 text-sm leading-relaxed">Identifie automatiquement les zones de <span style="color:#4ade80;font-weight:600;">support (vert)</span> et <span style="color:#f87171;font-weight:600;">résistance (rouge)</span> à partir du plus haut et du plus bas d'une période.</p>
+                            <p class="text-gray-300 text-sm leading-relaxed" data-i18n="ind1-desc">Identifie automatiquement les zones de <span style="color:#4ade80;font-weight:600;">support (vert)</span> et <span style="color:#f87171;font-weight:600;">résistance (rouge)</span> à partir du plus haut et du plus bas d'une période.</p>
                             <div class="space-y-3 text-sm">
-                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300"><span class="font-semibold text-white">Buy/Sell Power</span> – dominance acheteurs/vendeurs en temps réel</span></div>
-                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300"><span class="font-semibold text-white">Signaux de breakout</span> – détection automatique lors des cassures</span></div>
-                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300"><span class="font-semibold text-white">Fair Value Gaps (FVG)</span> – détection sur 5 min et 15 min</span></div>
+                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="ind1-item1"><span class="font-semibold text-white">Buy/Sell Power</span> – dominance acheteurs/vendeurs en temps réel</span></div>
+                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="ind1-item2"><span class="font-semibold text-white">Signaux de breakout</span> – détection automatique lors des cassures</span></div>
+                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="ind1-item3"><span class="font-semibold text-white">Fair Value Gaps (FVG)</span> – détection sur 5 min et 15 min</span></div>
                             </div>
                             <div class="pt-5 border-t border-orange-900/30">
                                 <div class="flex items-end justify-between mb-4">
                                     <div>
-                                        <p class="text-gray-400 text-xs">Prix unique</p>
+                                        <p class="text-gray-400 text-xs" data-i18n="ind1-price-label">Prix unique</p>
                                         <p class="text-4xl font-black text-fire">300$</p>
                                     </div>
-                                    <p class="text-gray-400 text-xs">Accès illimité</p>
+                                    <p class="text-gray-400 text-xs" data-i18n="ind1-access">Accès illimité</p>
                                 </div>
                                 <a href="https://buy.stripe.com/8x29ASgAmeix9rE2wD4ko01" target="_blank" rel="noopener noreferrer" class="btn-fire block w-full px-6 py-3 text-center font-bold">
-                                    Acheter – 300$ →
+                                    <span data-i18n="ind1-btn">Acheter – 300$ →</span>
                                 </a>
                             </div>
                         </div>
@@ -677,23 +681,23 @@
                                     <span class="feature-tag" style="background:rgba(168,85,247,0.15);color:#c084fc;border:1px solid rgba(168,85,247,0.3);">TP/SL auto</span>
                                 </div>
                             </div>
-                            <p class="text-gray-300 text-sm leading-relaxed">Trace automatiquement des trendlines à partir des pivots du marché. Des zones <span style="color:#4ade80;font-weight:600;">vertes (hausse)</span> et <span style="color:#f87171;font-weight:600;">rouges (baisse)</span> s'ajustent à la volatilité.</p>
+                            <p class="text-gray-300 text-sm leading-relaxed" data-i18n="ind2-desc">Trace automatiquement des trendlines à partir des pivots du marché. Des zones <span style="color:#4ade80;font-weight:600;">vertes (hausse)</span> et <span style="color:#f87171;font-weight:600;">rouges (baisse)</span> s'ajustent à la volatilité.</p>
                             <div class="space-y-3 text-sm">
-                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300"><span class="font-semibold text-white">Cassures détectées</span> – signaux BREAK BULLISH / BEARISH automatiques</span></div>
-                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300"><span class="font-semibold text-white">Rebonds identifiés</span> – signaux BUY/SELL sur les lignes de tendance</span></div>
-                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300"><span class="font-semibold text-white">Target & Stop Loss</span> – calculés automatiquement lors d'un BREAK</span></div>
-                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300"><span class="font-semibold text-white">Swing highs/lows</span> – affichage 5 min, graphique clair</span></div>
+                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="ind2-item1"><span class="font-semibold text-white">Cassures détectées</span> – signaux BREAK BULLISH / BEARISH automatiques</span></div>
+                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="ind2-item2"><span class="font-semibold text-white">Rebonds identifiés</span> – signaux BUY/SELL sur les lignes de tendance</span></div>
+                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="ind2-item3"><span class="font-semibold text-white">Target & Stop Loss</span> – calculés automatiquement lors d'un BREAK</span></div>
+                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="ind2-item4"><span class="font-semibold text-white">Swing highs/lows</span> – affichage 5 min, graphique clair</span></div>
                             </div>
                             <div class="pt-5 border-t border-orange-900/30">
                                 <div class="flex items-end justify-between mb-4">
                                     <div>
-                                        <p class="text-gray-400 text-xs">Prix unique</p>
+                                        <p class="text-gray-400 text-xs" data-i18n="ind1-price-label">Prix unique</p>
                                         <p class="text-4xl font-black text-fire">300$</p>
                                     </div>
-                                    <p class="text-gray-400 text-xs">Accès illimité</p>
+                                    <p class="text-gray-400 text-xs" data-i18n="ind1-access">Accès illimité</p>
                                 </div>
                                 <a href="https://buy.stripe.com/8x29ASgAmeix9rE2wD4ko01" target="_blank" rel="noopener noreferrer" class="btn-fire block w-full px-6 py-3 text-center font-bold">
-                                    Acheter – 300$ →
+                                    <span data-i18n="ind2-btn">Acheter – 300$ →</span>
                                 </a>
                             </div>
                         </div>
@@ -703,33 +707,33 @@
                 <!-- Combo -->
                 <div class="mt-10 card-fire-featured p-8 relative">
                     <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 px-5 py-1 rounded-full text-xs font-bold text-white" style="background:linear-gradient(135deg,#DC2626,#EA580C,#F59E0B);">
-                        🔥 ÉCONOMISEZ 100$
+                        <span data-i18n="combo-save">🔥 ÉCONOMISEZ 100$</span>
                     </div>
                     <div class="grid md:grid-cols-2 gap-8 items-center pt-2">
                         <div class="space-y-4">
-                            <h3 class="text-3xl font-black" style="color:#F97316;">Combo Indicateur</h3>
-                            <p class="text-gray-300 text-sm leading-relaxed">Obtenez les deux indicateurs ensemble et économisez 100$. Le duo parfait pour maximiser votre avantage sur les marchés.</p>
+                            <h3 class="text-3xl font-black" style="color:#F97316;" data-i18n="combo-title">Combo Indicateur</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed" data-i18n="combo-desc">Obtenez les deux indicateurs ensemble et économisez 100$. Le duo parfait pour maximiser votre avantage sur les marchés.</p>
                             <div class="space-y-2 text-sm">
-                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Support & Resistance Power Zones</span></div>
-                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Trendline Fusion</span></div>
-                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300">Accès illimité aux deux outils</span></div>
+                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="combo-item1">Support & Resistance Power Zones</span></div>
+                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="combo-item2">Trendline Fusion</span></div>
+                                <div class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="combo-item3">Accès illimité aux deux outils</span></div>
                             </div>
                         </div>
                         <div class="text-center space-y-4">
                             <div>
-                                <p class="text-gray-400 text-sm line-through">600$ séparément</p>
+                                <p class="text-gray-400 text-sm line-through" data-i18n="combo-old-price">600$ séparément</p>
                                 <p class="text-5xl font-black text-fire">500$</p>
-                                <p class="text-gray-400 text-xs mt-1">Paiement unique - Les deux indicateurs</p>
+                                <p class="text-gray-400 text-xs mt-1" data-i18n="combo-payment">Paiement unique - Les deux indicateurs</p>
                             </div>
                             <a href="https://buy.stripe.com/5kQ8wOese6Q5avI2wD4ko02" target="_blank" rel="noopener noreferrer" class="btn-fire block w-full px-6 py-4 text-center font-bold text-lg">
-                                Acheter le Combo – 500$ →
+                                <span data-i18n="combo-btn">Acheter le Combo – 500$ →</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="mt-6 p-4 rounded-lg text-center" style="background:linear-gradient(90deg,rgba(234,88,12,0.08),rgba(220,38,38,0.08));border:1px solid rgba(234,88,12,0.25);">
-                    <p class="text-gray-300 text-sm">💡 Les deux indicateurs sont aussi <span class="font-semibold" style="color:#F97316;">inclus gratuitement</span> avec la Formation Complète à 1000$</p>
+                    <p class="text-gray-300 text-sm" data-i18n="ind-note">💡 Les deux indicateurs sont aussi <span class="font-semibold" style="color:#F97316;">inclus gratuitement</span> avec la Formation Complète à 1000$</p>
                 </div>
             </div>
         </section>
@@ -739,34 +743,34 @@
         <!-- ═══════════ OUTILS EXCLUSIFS ═══════════ -->
         <section class="py-20 px-6 relative" style="background:linear-gradient(135deg,rgba(220,38,38,0.12) 0%,transparent 50%,rgba(234,88,12,0.12) 100%);border-top:1px solid rgba(234,88,12,0.2);border-bottom:1px solid rgba(234,88,12,0.2);">
             <div class="max-w-5xl mx-auto relative z-10">
-                <h2 class="text-4xl font-black mb-4 text-center">Les outils que j'utilise</h2>
-                <p class="text-center text-gray-300 mb-12 text-lg">Les outils et stratégies qui me permettent d'être rentable et consistant</p>
+                <h2 class="text-4xl font-black mb-4 text-center" data-i18n="tools-title">Les outils que j'utilise</h2>
+                <p class="text-center text-gray-300 mb-12 text-lg" data-i18n="tools-subtitle">Les outils et stratégies qui me permettent d'être rentable et consistant</p>
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="p-8 rounded-lg backdrop-blur" style="border:2px solid rgba(234,88,12,0.4);background:rgba(0,0,0,0.5);">
                         <div class="space-y-4">
                             <div class="text-5xl">🔐</div>
-                            <h3 class="text-2xl font-black">Mon Edge Personnel</h3>
-                            <p class="text-gray-300">Ma technique de trading combinant l'analyse technique avancée et la gestion psychologique du risque. Vous apprendrez exactement ma façon de placer mes positions et comment je gère mon capital avec discipline.</p>
+                            <h3 class="text-2xl font-black" data-i18n="tools-edge-title">Mon Edge Personnel</h3>
+                            <p class="text-gray-300" data-i18n="tools-edge-text">Ma technique de trading combinant l'analyse technique avancée et la gestion psychologique du risque. Vous apprendrez exactement ma façon de placer mes positions et comment je gère mon capital avec discipline.</p>
                             <div class="pt-4 border-t border-orange-900/30">
-                                <p class="font-bold text-sm" style="color:#F97316;">✓ Inclus à la Formation Complète</p>
-                                <p class="text-gray-400 text-xs mt-2">La fondation de ma rentabilité</p>
+                                <p class="font-bold text-sm" style="color:#F97316;" data-i18n="tools-edge-label">✓ Inclus à la Formation Complète</p>
+                                <p class="text-gray-400 text-xs mt-2" data-i18n="tools-edge-sublabel">La fondation de ma rentabilité</p>
                             </div>
                         </div>
                     </div>
                     <div class="p-8 rounded-lg backdrop-blur" style="border:2px solid rgba(234,88,12,0.4);background:rgba(0,0,0,0.5);">
                         <div class="space-y-4">
                             <div class="text-5xl">🤖</div>
-                            <h3 class="text-2xl font-black">Mon Indicateur Propriétaire</h3>
-                            <p class="text-gray-300">Un outil que j'ai développé et optimisé au fil des années de trading réel. Cet indicateur vous donne un avantage supplémentaire pour identifier les opportunités de trading avec plus de précision.</p>
+                            <h3 class="text-2xl font-black" data-i18n="tools-ind-title">Mon Indicateur Propriétaire</h3>
+                            <p class="text-gray-300" data-i18n="tools-ind-text">Un outil que j'ai développé et optimisé au fil des années de trading réel. Cet indicateur vous donne un avantage supplémentaire pour identifier les opportunités de trading avec plus de précision.</p>
                             <div class="pt-4 border-t border-orange-900/30">
-                                <p class="font-bold text-sm" style="color:#F97316;">✓ Inclus à la Formation Complète</p>
-                                <p class="text-gray-400 text-xs mt-2">Formation complète sur son utilisation quotidienne</p>
+                                <p class="font-bold text-sm" style="color:#F97316;" data-i18n="tools-ind-label">✓ Inclus à la Formation Complète</p>
+                                <p class="text-gray-400 text-xs mt-2" data-i18n="tools-ind-sublabel">Formation complète sur son utilisation quotidienne</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="mt-8 p-6 rounded-lg text-center" style="background:linear-gradient(90deg,rgba(234,88,12,0.15),rgba(220,38,38,0.15));border:1px solid rgba(234,88,12,0.4);">
-                    <p class="text-white font-semibold">Ces deux outils combinés = <span style="color:#F97316;">ta méthode personnalisée pour être profitable et consistant</span></p>
+                    <p class="text-white font-semibold" data-i18n="tools-cta">Ces deux outils combinés = <span style="color:#F97316;">ta méthode personnalisée pour être profitable et consistant</span></p>
                 </div>
             </div>
         </section>
@@ -781,16 +785,16 @@
                 </svg>
             </div>
             <div class="max-w-5xl mx-auto relative z-10">
-                <h2 class="text-4xl font-black mb-16 text-center">Questions Fréquentes</h2>
+                <h2 class="text-4xl font-black mb-16 text-center" data-i18n="faq-title">Questions Fréquentes</h2>
                 <div class="space-y-6">
                     <!-- FAQ items -->
                     <div class="p-6 rounded-lg cursor-pointer transition-all" style="border:1px solid rgba(234,88,12,0.25);background:rgba(234,88,12,0.04);" onmouseenter="this.style.background='rgba(234,88,12,0.09)'" onmouseleave="this.style.background='rgba(234,88,12,0.04)'" onclick="this.classList.toggle('expanded')">
                         <div class="flex items-start gap-4">
                             <div class="font-bold text-lg flex-shrink-0" style="color:#F97316;">Q</div>
                             <div class="flex-1">
-                                <h3 class="font-bold text-lg mb-2">Quel est le capital minimum pour commencer?</h3>
+                                <h3 class="font-bold text-lg mb-2" data-i18n="faq1-q">Quel est le capital minimum pour commencer?</h3>
                                 <div class="faq-answer hidden text-gray-300 text-sm leading-relaxed pt-2">
-                                    <p>Pour la Phase Démo, zéro capital requis - vous pratiquez sur un compte de démonstration. Pour passer à la Phase 3 (réel), je recommande un minimum de 500-1000$ pour une gestion prudente du risque.</p>
+                                    <p data-i18n="faq1-a">Pour la Phase Démo, zéro capital requis - vous pratiquez sur un compte de démonstration. Pour passer à la Phase 3 (réel), je recommande un minimum de 500-1000$ pour une gestion prudente du risque.</p>
                                 </div>
                             </div>
                         </div>
@@ -799,9 +803,9 @@
                         <div class="flex items-start gap-4">
                             <div class="font-bold text-lg flex-shrink-0" style="color:#F97316;">Q</div>
                             <div class="flex-1">
-                                <h3 class="font-bold text-lg mb-2">Combien de temps avant de devenir rentable?</h3>
+                                <h3 class="font-bold text-lg mb-2" data-i18n="faq2-q">Combien de temps avant de devenir rentable?</h3>
                                 <div class="faq-answer hidden text-gray-300 text-sm leading-relaxed pt-2">
-                                    <p>Cela dépend de votre engagement. Avec la formation complète et la discipline, la plupart des traders voient des résultats positifs en 2-4 mois en démo. Le passage au réel nécessite généralement 3-6 mois supplémentaires.</p>
+                                    <p data-i18n="faq2-a">Cela dépend de votre engagement. Avec la formation complète et la discipline, la plupart des traders voient des résultats positifs en 2-4 mois en démo. Le passage au réel nécessite généralement 3-6 mois supplémentaires.</p>
                                 </div>
                             </div>
                         </div>
@@ -810,9 +814,9 @@
                         <div class="flex items-start gap-4">
                             <div class="font-bold text-lg flex-shrink-0" style="color:#F97316;">Q</div>
                             <div class="flex-1">
-                                <h3 class="font-bold text-lg mb-2">La formation couvre-t-elle plusieurs marchés ou juste le Forex?</h3>
+                                <h3 class="font-bold text-lg mb-2" data-i18n="faq3-q">La formation couvre-t-elle plusieurs marchés ou juste le Forex?</h3>
                                 <div class="faq-answer hidden text-gray-300 text-sm leading-relaxed pt-2">
-                                    <p>La formation couvre tous les marchés: Forex, Or (XAUUSD), Commodités (pétrole, gaz naturel, etc.) et Métaux précieux. Les principes sont identiques pour tous.</p>
+                                    <p data-i18n="faq3-a">La formation couvre tous les marchés: Forex, Or (XAUUSD), Commodités (pétrole, gaz naturel, etc.) et Métaux précieux. Les principes sont identiques pour tous.</p>
                                 </div>
                             </div>
                         </div>
@@ -821,9 +825,9 @@
                         <div class="flex items-start gap-4">
                             <div class="font-bold text-lg flex-shrink-0" style="color:#F97316;">Q</div>
                             <div class="flex-1">
-                                <h3 class="font-bold text-lg mb-2">Quelle est la différence entre Formation Compacte et Formation Complète?</h3>
+                                <h3 class="font-bold text-lg mb-2" data-i18n="faq4-q">Quelle est la différence entre Formation Compacte et Formation Complète?</h3>
                                 <div class="faq-answer hidden text-gray-300 text-sm leading-relaxed pt-2">
-                                    <p>La Formation Compacte vous enseigne les fondamentaux solides des 3 phases. La Formation Complète ajoute: un coaching personnalisé intensif pendant 6 mois, l'accès à mon edge personnel et mon indicateur propriétaire.</p>
+                                    <p data-i18n="faq4-a">La Formation Compacte vous enseigne les fondamentaux solides des 3 phases. La Formation Complète ajoute: un coaching personnalisé intensif pendant 6 mois, l'accès à mon edge personnel et mon indicateur propriétaire.</p>
                                 </div>
                             </div>
                         </div>
@@ -832,9 +836,9 @@
                         <div class="flex items-start gap-4">
                             <div class="font-bold text-lg flex-shrink-0" style="color:#F97316;">Q</div>
                             <div class="flex-1">
-                                <h3 class="font-bold text-lg mb-2">Avez-vous des garanties de profit ou de remboursement?</h3>
+                                <h3 class="font-bold text-lg mb-2" data-i18n="faq5-q">Avez-vous des garanties de profit ou de remboursement?</h3>
                                 <div class="faq-answer hidden text-gray-300 text-sm leading-relaxed pt-2">
-                                    <p>Non. Le trading comporte des risques et aucune formation ne peut garantir des profits. Ce que je garantis: une formation solide basée sur mes 3+ ans de rentabilité, un accompagnement sérieux et de vraies stratégies.</p>
+                                    <p data-i18n="faq5-a">Non. Le trading comporte des risques et aucune formation ne peut garantir des profits. Ce que je garantis: une formation solide basée sur mes 3+ ans de rentabilité, un accompagnement sérieux et de vraies stratégies.</p>
                                 </div>
                             </div>
                         </div>
@@ -843,9 +847,9 @@
                         <div class="flex items-start gap-4">
                             <div class="font-bold text-lg flex-shrink-0" style="color:#F97316;">Q</div>
                             <div class="flex-1">
-                                <h3 class="font-bold text-lg mb-2">Quel broker/plateforme recommandez-vous?</h3>
+                                <h3 class="font-bold text-lg mb-2" data-i18n="faq6-q">Quel broker/plateforme recommandez-vous?</h3>
                                 <div class="faq-answer hidden text-gray-300 text-sm leading-relaxed pt-2">
-                                    <p>Je recommande MetaTrader 5 (MT5) comme plateforme car c'est ce que j'utilise. Pour les brokers, je conseille ceux régulés et fiables.</p>
+                                    <p data-i18n="faq6-a">Je recommande MetaTrader 5 (MT5) comme plateforme car c'est ce que j'utilise. Pour les brokers, je conseille ceux régulés et fiables.</p>
                                 </div>
                             </div>
                         </div>
@@ -854,9 +858,9 @@
                         <div class="flex items-start gap-4">
                             <div class="font-bold text-lg flex-shrink-0" style="color:#F97316;">Q</div>
                             <div class="flex-1">
-                                <h3 class="font-bold text-lg mb-2">Dois-je avoir des connaissances préalables en trading?</h3>
+                                <h3 class="font-bold text-lg mb-2" data-i18n="faq7-q">Dois-je avoir des connaissances préalables en trading?</h3>
                                 <div class="faq-answer hidden text-gray-300 text-sm leading-relaxed pt-2">
-                                    <p>Non! La formation est conçue pour les débutants complets ET les traders avec expérience. Chacun progresse à son rythme.</p>
+                                    <p data-i18n="faq7-a">Non! La formation est conçue pour les débutants complets ET les traders avec expérience. Chacun progresse à son rythme.</p>
                                 </div>
                             </div>
                         </div>
@@ -865,9 +869,9 @@
                         <div class="flex items-start gap-4">
                             <div class="font-bold text-lg flex-shrink-0" style="color:#F97316;">Q</div>
                             <div class="flex-1">
-                                <h3 class="font-bold text-lg mb-2">Combien de temps par jour dois-je consacrer au trading?</h3>
+                                <h3 class="font-bold text-lg mb-2" data-i18n="faq8-q">Combien de temps par jour dois-je consacrer au trading?</h3>
                                 <div class="faq-answer hidden text-gray-300 text-sm leading-relaxed pt-2">
-                                    <p>Avec ma méthode, vous pouvez trader 30min-2h par jour pendant vos sessions préférées. La discipline et la qualité des trades comptent plus que le temps passé.</p>
+                                    <p data-i18n="faq8-a">Avec ma méthode, vous pouvez trader 30min-2h par jour pendant vos sessions préférées. La discipline et la qualité des trades comptent plus que le temps passé.</p>
                                 </div>
                             </div>
                         </div>
@@ -876,9 +880,9 @@
                         <div class="flex items-start gap-4">
                             <div class="font-bold text-lg flex-shrink-0" style="color:#F97316;">Q</div>
                             <div class="flex-1">
-                                <h3 class="font-bold text-lg mb-2">L'accompagnement 6 mois signifie quoi exactement?</h3>
+                                <h3 class="font-bold text-lg mb-2" data-i18n="faq9-q">L'accompagnement 6 mois signifie quoi exactement?</h3>
                                 <div class="faq-answer hidden text-gray-300 text-sm leading-relaxed pt-2">
-                                    <p>Pour la Formation Complète: 6 mois d'accès direct à moi pour questions illimitées, revue de vos charts et trades réels, feedback personnalisé, conseil psychologique et stratégies de scaling.</p>
+                                    <p data-i18n="faq9-a">Pour la Formation Complète: 6 mois d'accès direct à moi pour questions illimitées, revue de vos charts et trades réels, feedback personnalisé, conseil psychologique et stratégies de scaling.</p>
                                 </div>
                             </div>
                         </div>
@@ -886,9 +890,9 @@
                 </div>
 
                 <div class="mt-12 p-6 rounded-lg text-center" style="background:rgba(234,88,12,0.08);border:1px solid rgba(234,88,12,0.3);">
-                    <p class="text-gray-300 mb-3">D'autres questions?</p>
+                    <p class="text-gray-300 mb-3" data-i18n="faq-cta">D'autres questions?</p>
                     <button onclick="scrollToSection('contact')" class="font-bold hover:opacity-80 transition" style="color:#F97316;">
-                        Contactez-moi directement →
+                        <span data-i18n="faq-cta-link">Contactez-moi directement →</span>
                     </button>
                 </div>
             </div>
@@ -899,33 +903,33 @@
         <!-- ═══════════ ACCÈS DOCUMENTS ═══════════ -->
         <section class="py-20 px-6 relative" style="background:linear-gradient(180deg,rgba(234,88,12,0.04) 0%,transparent 100%);">
             <div class="max-w-5xl mx-auto relative z-10">
-                <h2 class="text-4xl font-black mb-12 text-center">Comment accéder à votre formation?</h2>
+                <h2 class="text-4xl font-black mb-12 text-center" data-i18n="docs-title">Comment accéder à votre formation?</h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="card-fire p-6 text-center">
                         <div class="text-5xl mb-4">💳</div>
-                        <h3 class="font-bold text-lg mb-2">Étape 1: Effectuez le paiement</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed">Cliquez sur "Acheter maintenant" et complétez le paiement sécurisé via Stripe.</p>
+                        <h3 class="font-bold text-lg mb-2" data-i18n="docs-step1-title">Étape 1: Effectuez le paiement</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-i18n="docs-step1-text">Cliquez sur "Acheter maintenant" et complétez le paiement sécurisé via Stripe.</p>
                     </div>
                     <div class="card-fire p-6 text-center">
                         <div class="text-5xl mb-4">📧</div>
-                        <h3 class="font-bold text-lg mb-2">Étape 2: Recevez les documents</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed">Après le paiement, les documents Word de votre formation sont envoyés à votre email automatiquement.</p>
+                        <h3 class="font-bold text-lg mb-2" data-i18n="docs-step2-title">Étape 2: Recevez les documents</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-i18n="docs-step2-text">Après le paiement, les documents Word de votre formation sont envoyés à votre email automatiquement.</p>
                     </div>
                     <div class="card-fire p-6 text-center">
                         <div class="text-5xl mb-4">☁️</div>
-                        <h3 class="font-bold text-lg mb-2">Étape 3: Accédez au cloud</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed">Les documents sont sur un cloud gratuit. Aucun besoin de payer ou télécharger Word.</p>
+                        <h3 class="font-bold text-lg mb-2" data-i18n="docs-step3-title">Étape 3: Accédez au cloud</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed" data-i18n="docs-step3-text">Les documents sont sur un cloud gratuit. Aucun besoin de payer ou télécharger Word.</p>
                     </div>
                 </div>
                 <div class="mt-12 p-8 rounded-lg" style="background:linear-gradient(90deg,rgba(234,88,12,0.08),rgba(220,38,38,0.08));border:1px solid rgba(234,88,12,0.3);">
                     <div class="space-y-4">
-                        <h3 class="text-xl font-bold" style="color:#F97316;">📋 À propos de vos documents</h3>
+                        <h3 class="text-xl font-bold" style="color:#F97316;" data-i18n="docs-about-title">📋 À propos de vos documents</h3>
                         <ul class="space-y-3 text-gray-300">
-                            <li class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span><span class="font-semibold">Format Word:</span> Les documents sont en format .docx (lisible partout)</span></li>
-                            <li class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span><span class="font-semibold">Pas besoin de payer:</span> Accès gratuit au cloud - aucun abonnement Word payant requis</span></li>
-                            <li class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span><span class="font-semibold">Accès en ligne:</span> Consultez depuis n'importe quel appareil</span></li>
-                            <li class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span><span class="font-semibold">Accès illimité:</span> Une fois payé, vous avez accès à vie aux documents</span></li>
-                            <li class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span><span class="font-semibold">Téléchargement optionnel:</span> Vous pouvez télécharger et sauvegarder si vous le souhaitez</span></li>
+                            <li class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span data-i18n="docs-item1"><span class="font-semibold">Format Word:</span> Les documents sont en format .docx (lisible partout)</span></li>
+                            <li class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span data-i18n="docs-item2"><span class="font-semibold">Pas besoin de payer:</span> Accès gratuit au cloud - aucun abonnement Word payant requis</span></li>
+                            <li class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span data-i18n="docs-item3"><span class="font-semibold">Accès en ligne:</span> Consultez depuis n'importe quel appareil</span></li>
+                            <li class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span data-i18n="docs-item4"><span class="font-semibold">Accès illimité:</span> Une fois payé, vous avez accès à vie aux documents</span></li>
+                            <li class="flex gap-3"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span data-i18n="docs-item5"><span class="font-semibold">Téléchargement optionnel:</span> Vous pouvez télécharger et sauvegarder si vous le souhaitez</span></li>
                         </ul>
                     </div>
                 </div>
@@ -937,16 +941,16 @@
         <!-- ═══════════ CONTACT ═══════════ -->
         <section id="contact" class="py-20 px-6 relative" style="background:linear-gradient(180deg,transparent,rgba(234,88,12,0.06));">
             <div class="max-w-2xl mx-auto relative z-10">
-                <h2 class="text-4xl font-black mb-4 text-center">Prêt à commencer?</h2>
-                <p class="text-center text-gray-400 mb-12">Contactez-moi directement pour démarrer votre formation.</p>
+                <h2 class="text-4xl font-black mb-4 text-center" data-i18n="contact-title">Prêt à commencer?</h2>
+                <p class="text-center text-gray-400 mb-12" data-i18n="contact-subtitle">Contactez-moi directement pour démarrer votre formation.</p>
                 <div class="space-y-6">
                     <div class="rounded-lg cursor-pointer transition-all p-6" style="border:2px solid rgba(59,130,246,0.5);background:linear-gradient(90deg,rgba(59,130,246,0.1),rgba(0,0,0,1));" onmouseenter="this.style.borderColor='rgba(96,165,250,0.8)'" onmouseleave="this.style.borderColor='rgba(59,130,246,0.5)'">
                         <a href="https://t.me/+c2QcRgUMCZc3NDUx" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4">
                             <div class="text-4xl">📱</div>
                             <div>
-                                <div class="font-bold text-lg text-blue-400">Groupe Telegram Gratuit</div>
-                                <div class="text-gray-300 text-sm mt-1">Rejoignez pour des prédictions et analyses chaque semaine</div>
-                                <div class="text-blue-400 font-mono text-xs mt-2">Totalement gratuit - Cliquez pour rejoindre →</div>
+                                <div class="font-bold text-lg text-blue-400" data-i18n="contact-tg-free">Groupe Telegram Gratuit</div>
+                                <div class="text-gray-300 text-sm mt-1" data-i18n="contact-tg-free-desc">Rejoignez pour des prédictions et analyses chaque semaine</div>
+                                <div class="text-blue-400 font-mono text-xs mt-2" data-i18n="contact-tg-free-link">Totalement gratuit - Cliquez pour rejoindre →</div>
                             </div>
                         </a>
                     </div>
@@ -954,7 +958,7 @@
                         <div class="flex items-center gap-4">
                             <div class="text-3xl">📧</div>
                             <div>
-                                <div class="font-bold">Email direct</div>
+                                <div class="font-bold" data-i18n="contact-email-label">Email direct</div>
                                 <div class="font-mono text-sm" style="color:#F97316;"><a href="mailto:neodtrading@gmail.com">neodtrading@gmail.com</a></div>
                             </div>
                         </div>
@@ -963,23 +967,23 @@
                         <div class="flex items-center gap-4">
                             <div class="text-3xl">✈️</div>
                             <div>
-                                <div class="font-bold">Telegram (plus rapide)</div>
+                                <div class="font-bold" data-i18n="contact-tg-label">Telegram (plus rapide)</div>
                                 <div class="font-mono text-sm" style="color:#F97316;">@yashysako</div>
                             </div>
                         </div>
                     </div>
                     <div class="grid md:grid-cols-3 gap-4 pt-6">
                         <a href="https://t.me/+c2QcRgUMCZc3NDUx" target="_blank" rel="noopener noreferrer" class="px-6 py-4 font-bold rounded-lg text-center text-white transition" style="background:linear-gradient(135deg,#1d4ed8,#2563eb);" onmouseenter="this.style.boxShadow='0 0 24px rgba(59,130,246,0.4)'" onmouseleave="this.style.boxShadow='none'">
-                            Rejoindre Telegram →
+                            <span data-i18n="contact-btn1">Rejoindre Telegram →</span>
                         </a>
                         <a href="mailto:neodtrading@gmail.com" class="btn-fire px-6 py-4 text-center">
-                            Envoyer un email →
+                            <span data-i18n="contact-btn2">Envoyer un email →</span>
                         </a>
                         <a href="https://t.me/yashysako" target="_blank" rel="noopener noreferrer" class="btn-fire px-6 py-4 text-center">
-                            Ouvrir Telegram →
+                            <span data-i18n="contact-btn3">Ouvrir Telegram →</span>
                         </a>
                     </div>
-                    <p class="text-center text-sm text-gray-400">Mentionne "Formation Trading" pour une réponse plus rapide</p>
+                    <p class="text-center text-sm text-gray-400" data-i18n="contact-mention">Mentionne "Formation Trading" pour une réponse plus rapide</p>
                 </div>
             </div>
         </section>
@@ -1026,23 +1030,23 @@
                 </div>
 
                 <div class="text-center">
-                    <p class="text-gray-400 text-sm">Si vous êtes patient, discipliné et prêt à travailler votre mental...</p>
-                    <p class="mt-2 font-semibold" style="color:#F97316;">Cette formation vous met sur les rails pour devenir rentable et consistant.</p>
+                    <p class="text-gray-400 text-sm" data-i18n="footer-tagline">Si vous êtes patient, discipliné et prêt à travailler votre mental...</p>
+                    <p class="mt-2 font-semibold" style="color:#F97316;" data-i18n="footer-cta">Cette formation vous met sur les rails pour devenir rentable et consistant.</p>
                 </div>
 
                 <div class="fire-divider"></div>
 
                 <div class="space-y-6 text-xs text-gray-400">
                     <div class="text-center">
-                        <p class="font-semibold text-gray-300">© Samuel D'amours/EmberTrading, 2026. Tous droits réservés.</p>
+                        <p class="font-semibold text-gray-300" data-i18n="footer-copy">© Samuel D'amours/EmberTrading, 2026. Tous droits réservés.</p>
                     </div>
                     <div class="max-w-4xl mx-auto space-y-4">
                         <div>
-                            <h4 class="font-semibold text-gray-300 mb-2">Clause de non-responsabilité :</h4>
-                            <p class="text-gray-400 leading-relaxed">Les analyses partagées le sont à titre informatif et éducatif uniquement. Elles ne constituent ni une recommandation d'achat ou de vente, ni un conseil en investissement.</p>
+                            <h4 class="font-semibold text-gray-300 mb-2" data-i18n="footer-disclaimer-title">Clause de non-responsabilité :</h4>
+                            <p class="text-gray-400 leading-relaxed" data-i18n="footer-disclaimer">Les analyses partagées le sont à titre informatif et éducatif uniquement. Elles ne constituent ni une recommandation d'achat ou de vente, ni un conseil en investissement.</p>
                         </div>
                         <div>
-                            <p class="text-gray-400 leading-relaxed font-semibold">Risque élevé : Le trading sur le Forex comporte des risques importants et peut entraîner la perte totale du capital investi.</p>
+                            <p class="text-gray-400 leading-relaxed font-semibold" data-i18n="footer-risk">Risque élevé : Le trading sur le Forex comporte des risques importants et peut entraîner la perte totale du capital investi.</p>
                         </div>
                     </div>
                 </div>
@@ -1054,6 +1058,240 @@
         function scrollToSection(sectionId) {
             const element = document.getElementById(sectionId);
             if (element) { element.scrollIntoView({ behavior: 'smooth' }); }
+        }
+
+        let currentLang = 'fr';
+
+        const translations = {
+            // ── PAGE TITLE ──
+            'page-title': {
+                fr: 'Formation Trading Forex, Commodités & Métaux - EmberTrading',
+                en: 'Forex, Commodities & Metals Trading Course - EmberTrading'
+            },
+            // ── HERO ──
+            'hero-badge': { fr: 'Formation complète Forex, Commodités & Métaux', en: 'Complete Forex, Commodities & Metals Course' },
+            'hero-h1': { fr: 'Du chaos <span class="text-fire">à la consistance</span>', en: 'From chaos <span class="text-fire">to consistency</span>' },
+            'hero-desc': { fr: 'Maîtrisez le trading sur tous les marchés avec une formation structurée, un mental en béton et un accompagnement direct.', en: 'Master trading across all markets with a structured course, an iron mindset and direct mentorship.' },
+            'hero-btn1': { fr: 'Commencer maintenant →', en: 'Start now →' },
+            'hero-btn2': { fr: 'Voir le programme', en: 'View the program' },
+            'hero-stat1': { fr: "Phases d'apprentissage", en: 'Learning phases' },
+            'hero-stat2': { fr: "Mois d'accompagnement", en: 'Months of mentorship' },
+            'hero-stat3': { fr: 'Ans de connaissance', en: 'Years of experience' },
+            // ── À PROPOS ──
+            'apropos-title': { fr: 'À propos', en: 'About' },
+            'apropos-subtitle': { fr: 'Trader indépendant – EmberTrading', en: 'Independent Trader – EmberTrading' },
+            'apropos-since': { fr: 'Passionné des marchés financiers depuis début 2019', en: 'Passionate about financial markets since early 2019' },
+            'apropos-profitable': { fr: 'Profitable de manière consistante depuis 3 ans', en: 'Consistently profitable for 3 years' },
+            'apropos-p1': { fr: "J'ai commencé à m'intéresser sérieusement au trading en 2019. Après plusieurs années d'apprentissage, d'erreurs et d'optimisations, je trade de façon rentable et disciplinée depuis 3 ans.", en: "I started taking trading seriously in 2019. After years of learning, mistakes and optimization, I have been trading profitably and with discipline for 3 years." },
+            'apropos-p2': { fr: "Fondateur d'EmberTrading, je partage mon approche axée sur <span style=\"color:#F97316;font-weight:600;\">la gestion du risque stricte, l'edge statistique et la constance sur le long terme.</span>", en: "Founder of EmberTrading, I share my approach focused on <span style=\"color:#F97316;font-weight:600;\">strict risk management, statistical edge and long-term consistency.</span>" },
+            'apropos-philo-label': { fr: '💡 Philosophie', en: '💡 Philosophy' },
+            'apropos-philo-text': { fr: '80% mental, 20% technique. La différence entre un trader rentable et un trader non rentable réside dans la psychologie et la discipline.', en: '80% mindset, 20% technique. The difference between a profitable and unprofitable trader lies in psychology and discipline.' },
+            // ── DIFFÉRENT ──
+            'diff-title': { fr: 'Ce qui rend cette formation différente', en: 'What makes this course different' },
+            'diff-1-title': { fr: 'Pas de technique à la mode', en: 'No trendy techniques' },
+            'diff-1-text': { fr: "Nous vous apportons les outils pour créer votre propre technique de trading. Nous n'essayons pas de vous vendre une technique à la mode.", en: "We give you the tools to build your own trading approach. We don't try to sell you a trendy technique." },
+            'diff-2-title': { fr: "L'importance de la psychologie", en: 'The importance of psychology' },
+            'diff-2-text': { fr: 'Nous mettons beaucoup l\'emphase sur la psychologie pour que vous développiez un bon risk management.', en: 'We place strong emphasis on psychology so you develop solid risk management.' },
+            'diff-3-title': { fr: 'Apprentissage par la pratique', en: 'Learning by doing' },
+            'diff-3-text': { fr: 'Défi démo concret avec journal obligatoire. Vous apprenez en agissant, pas en théorie.', en: 'Concrete demo challenge with mandatory journal. You learn by doing, not just theory.' },
+            'diff-4-title': { fr: 'Accompagnement personnalisé', en: 'Personalized mentorship' },
+            'diff-4-text': { fr: 'Feedback sans jugement sur vos trades réels et démo. Je reste présent pour répondre à vos questions.', en: 'Non-judgmental feedback on your real and demo trades. I stay available to answer your questions.' },
+            // ── PROGRAMME ──
+            'prog-title': { fr: 'Le programme en 3 phases', en: 'The 3-phase program' },
+            'phase1-label': { fr: 'Phase 1', en: 'Phase 1' },
+            'phase1-title': { fr: 'Les bases solides et survie', en: 'Strong foundations & survival' },
+            'phase1-duration': { fr: '2 à 6 semaines', en: '2 to 6 weeks' },
+            'phase1-item1': { fr: 'Lire un graphique (tendance, supports/résistances, bougies)', en: 'Reading a chart (trend, support/resistance, candles)' },
+            'phase1-item2': { fr: 'Maîtriser MetaTrader 5, ordres, levier, calcul de lot', en: 'Master MetaTrader 5, orders, leverage, lot sizing' },
+            'phase1-item3': { fr: 'Comprendre les sessions (Asia, Europe, US)', en: 'Understanding sessions (Asia, Europe, US)' },
+            'phase1-item4': { fr: "Identifier les heures d'ouverture optimales pour chaque paire/marché", en: 'Identify optimal trading hours for each pair/market' },
+            'phase1-item5': { fr: 'Comprendre accumulation/manipulation/<br>distribution', en: 'Understanding accumulation/manipulation/<br>distribution' },
+            'phase1-item6': { fr: "Astuce: repérer les zones d'accumulation", en: 'Tip: spotting accumulation zones' },
+            'phase1-item7': { fr: 'Défi démo clé: +1 000$ net sur 10k sans descendre sous 9k', en: 'Key demo challenge: +$1,000 net on 10k without dropping below 9k' },
+            'phase1-goal': { fr: "Objectif: Ne plus faire exploser votre compte, même après 10 pertes", en: 'Goal: Stop blowing your account, even after 10 losses' },
+            'phase2-label': { fr: 'Phase 2', en: 'Phase 2' },
+            'phase2-title': { fr: 'Forger le mental et discipline', en: 'Building mindset & discipline' },
+            'phase2-duration': { fr: 'Semaines 4 à 8', en: 'Weeks 4 to 8' },
+            'phase2-item1': { fr: 'Gestion du risque: 1-2% max par trade', en: 'Risk management: 1-2% max per trade' },
+            'phase2-item2': { fr: 'Contrôler les émotions: pas de revenge, pause après 3 pertes', en: 'Control emotions: no revenge trading, break after 3 losses' },
+            'phase2-item3': { fr: 'Analyse top-down: H4 → timeframes inférieurs', en: 'Top-down analysis: H4 → lower timeframes' },
+            'phase2-item4': { fr: 'Zones de liquidité, anciens swing highs/lows', en: 'Liquidity zones, previous swing highs/lows' },
+            'phase2-item5': { fr: 'Trader pendant les sessions optimales', en: 'Trade during optimal sessions' },
+            'phase2-item6': { fr: 'Style recommandé: petits mouvements 5-30 pips', en: 'Recommended style: small moves 5-30 pips' },
+            'phase2-goal': { fr: 'Objectif: Trader un processus, pas vos émotions', en: 'Goal: Trade a process, not your emotions' },
+            'phase3-label': { fr: 'Phase 3', en: 'Phase 3' },
+            'phase3-title': { fr: 'Passage réel et scaling', en: 'Going live & scaling' },
+            'phase3-duration': { fr: 'Après 6-12 semaines', en: 'After 6-12 weeks' },
+            'phase3-item1': { fr: 'Passage à la réalité: Prop firm ou compte live', en: 'Going live: Prop firm or live account' },
+            'phase3-item2': { fr: 'Journal de trading continu et feedback personnalisé', en: 'Ongoing trading journal and personalized feedback' },
+            'phase3-item3': { fr: 'Soutien 6 mois: questions illimitées, revue de charts', en: '6-month support: unlimited questions, chart reviews' },
+            'phase3-item4': { fr: 'Optimisation des sessions: vos meilleures heures', en: 'Session optimization: your best trading hours' },
+            'phase3-item5': { fr: 'Accompagnement psychologique et conseils de scaling', en: 'Psychological support and scaling advice' },
+            'phase3-item6': { fr: 'Mon edge personnel: ma technique de trading', en: 'My personal edge: my trading technique' },
+            'phase3-item7': { fr: "Mon indicateur personnel codé que j'utilise", en: 'My personal coded indicator that I use' },
+            'phase3-goal': { fr: 'Objectif: Prouver que vous tenez en conditions réelles', en: 'Goal: Prove you hold up in real conditions' },
+            // ── PRICING ──
+            'pricing-title': { fr: 'Deux chemins vers la rentabilité', en: 'Two paths to profitability' },
+            'pricing-subtitle': { fr: 'Les deux plans incluent une formation solide. La différence? Le coaching personnel et les outils secrets.', en: 'Both plans include a solid course. The difference? Personal coaching and secret tools.' },
+            'pricing-note': { fr: '<span class="font-bold" style="color:#F97316;">Les deux offres couvrent les 3 phases du programme.</span> La Compacte est compacte avec l\'essentiel, la Complète ajoute coaching personnalisé + mes outils secrets.', en: '<span class="font-bold" style="color:#F97316;">Both offers cover the 3 program phases.</span> The Compact has the essentials, the Complete adds personal coaching + my secret tools.' },
+            'compact-title': { fr: 'Formation Compacte', en: 'Compact Course' },
+            'compact-desc': { fr: 'Formation compacte et essentielle pour débuter', en: 'Compact and essential course to get started' },
+            'compact-payment': { fr: 'Paiement unique - Accès illimité', en: 'One-time payment - Unlimited access' },
+            'compact-what': { fr: '✓ Ce que vous recevez:', en: '✓ What you receive:' },
+            'compact-item1': { fr: 'Les 3 phases du programme (version compacte)', en: 'The 3 program phases (compact version)' },
+            'compact-item2': { fr: 'Fondamentaux multi-marchés: graphiques, supports/résistances, bougies', en: 'Multi-market fundamentals: charts, support/resistance, candles' },
+            'compact-item3': { fr: 'Maîtrise MetaTrader 5, ordres, levier, gestion du risque', en: 'MetaTrader 5 mastery, orders, leverage, risk management' },
+            'compact-item4': { fr: "Défis démo + journal d'apprentissage structuré", en: 'Demo challenges + structured learning journal' },
+            'compact-item5': { fr: 'Mental et discipline: gérer les émotions, patience, stop loss', en: 'Mindset and discipline: managing emotions, patience, stop loss' },
+            'compact-item6': { fr: 'Support direct - je reste présent pour répondre à vos questions', en: 'Direct support - I stay available to answer your questions' },
+            'compact-diff-title': { fr: 'Différences vs Formation Complète:', en: 'Differences vs Complete Course:' },
+            'compact-diff1': { fr: 'Pas de coaching personnalisé approfondi', en: 'No in-depth personal coaching' },
+            'compact-diff2': { fr: 'Pas accès à ma technique de trading personnelle', en: 'No access to my personal trading technique' },
+            'compact-diff3': { fr: "Pas accès à mon indicateur propriétaire", en: 'No access to my proprietary indicator' },
+            'compact-diff4': { fr: "Moins de contenu et d'outils avancés", en: 'Less content and advanced tools' },
+            'compact-btn1': { fr: 'En savoir plus →', en: 'Learn more →' },
+            'compact-btn2': { fr: 'Acheter maintenant - 500$ →', en: 'Buy now - $500 →' },
+            'complete-desc': { fr: 'Contenu approfondi, coaching personnel et tous mes outils', en: 'In-depth content, personal coaching and all my tools' },
+            'complete-payment': { fr: 'Paiement unique - Accès illimité + Coaching 6 mois', en: 'One-time payment - Unlimited access + 6-month coaching' },
+            'complete-what': { fr: '✓ Ce que vous recevez:', en: '✓ What you receive:' },
+            'complete-item1': { fr: 'Les 3 phases complètes avec beaucoup plus de contenu', en: 'All 3 complete phases with much more content' },
+            'complete-item2': { fr: 'Formation adaptée au total débutant ET aux traders avancés', en: 'Course adapted for complete beginners AND advanced traders' },
+            'complete-item3': { fr: 'Maîtrise avancée: graphiques, patterns, zones de liquidité', en: 'Advanced mastery: charts, patterns, liquidity zones' },
+            'complete-item4': { fr: 'Gestion mentale et psychologique du trading (approfondie)', en: 'In-depth mental and psychological trading management' },
+            'complete-item5': { fr: '🔐 Mon edge personnel (technique et gestion psychologique)', en: '🔐 My personal edge (technique and psychological management)' },
+            'complete-item6': { fr: "🤖 Mon indicateur propriétaire que j'utilise", en: '🤖 My proprietary indicator that I use' },
+            'complete-item7': { fr: 'Coaching personnalisé 6 mois', en: 'Personalized 6-month coaching' },
+            'complete-item8': { fr: 'Revue complète de vos trades réels', en: 'Full review of your real trades' },
+            'complete-item9': { fr: 'Accès direct avec questions illimitées', en: 'Direct access with unlimited questions' },
+            'complete-item10': { fr: 'Support psychologique et conseils de scaling', en: 'Psychological support and scaling advice' },
+            'complete-indicator-label': { fr: "🤖 L'indicateur propriétaire est inclus dans le prix", en: '🤖 The proprietary indicator is included in the price' },
+            'complete-indicator-text': { fr: 'Formation complète sur son utilisation quotidienne', en: 'Complete training on its daily use' },
+            'complete-btn': { fr: 'Acheter maintenant - 1000$ →', en: 'Buy now - $1000 →' },
+            'compare-title': { fr: 'Résumé: Quelle offre pour vous?', en: 'Summary: Which offer is for you?' },
+            'compare-compact-title': { fr: 'Formation Compacte - 500$', en: 'Compact Course - $500' },
+            'compare-compact1': { fr: 'Vous êtes débutant et voulez apprendre les bases solides', en: "You're a beginner and want to learn solid foundations" },
+            'compare-compact2': { fr: 'Vous pouvez être autonome et vous engager sérieusement', en: 'You can be independent and commit seriously' },
+            'compare-compact3': { fr: 'Vous voulez une formation compacte et essentielle', en: 'You want a compact and essential course' },
+            'compare-compact4': { fr: 'Vous avez un budget restreint', en: 'You have a limited budget' },
+            'compare-complete-title': { fr: 'Formation Complète - 1000$', en: 'Complete Course - $1000' },
+            'compare-complete1': { fr: 'Vous voulez les résultats les plus rapides possibles', en: 'You want the fastest possible results' },
+            'compare-complete2': { fr: 'Vous voulez du feedback personnel et coaching direct', en: 'You want personal feedback and direct coaching' },
+            'compare-complete3': { fr: 'Vous voulez accès à mes outils (edge et indicateur)', en: 'You want access to my tools (edge and indicator)' },
+            'compare-complete4': { fr: 'Vous voulez une véritable relation de mentorat 6 mois', en: 'You want a real 6-month mentorship relationship' },
+            'compare-complete5': { fr: 'Vous êtes prêt à investir pour transformer votre vie', en: 'You are ready to invest to transform your life' },
+            // ── INDICATEURS ──
+            'ind-title': { fr: 'Mes Indicateurs de Trading', en: 'My Trading Indicators' },
+            'ind-subtitle': { fr: "Des outils développés et optimisés à partir de mon expérience réelle sur les marchés", en: 'Tools developed and optimized from my real market experience' },
+            'ind1-desc': { fr: "Identifie automatiquement les zones de <span style=\"color:#4ade80;font-weight:600;\">support (vert)</span> et <span style=\"color:#f87171;font-weight:600;\">résistance (rouge)</span> à partir du plus haut et du plus bas d'une période.", en: "Automatically identifies <span style=\"color:#4ade80;font-weight:600;\">support (green)</span> and <span style=\"color:#f87171;font-weight:600;\">resistance (red)</span> zones from a period's high and low." },
+            'ind1-item1': { fr: '<span class="font-semibold text-white">Buy/Sell Power</span> – dominance acheteurs/vendeurs en temps réel', en: '<span class="font-semibold text-white">Buy/Sell Power</span> – buyer/seller dominance in real time' },
+            'ind1-item2': { fr: '<span class="font-semibold text-white">Signaux de breakout</span> – détection automatique lors des cassures', en: '<span class="font-semibold text-white">Breakout signals</span> – automatic detection on breakouts' },
+            'ind1-item3': { fr: '<span class="font-semibold text-white">Fair Value Gaps (FVG)</span> – détection sur 5 min et 15 min', en: '<span class="font-semibold text-white">Fair Value Gaps (FVG)</span> – detection on 5 min and 15 min' },
+            'ind1-price-label': { fr: 'Prix unique', en: 'One-time price' },
+            'ind1-access': { fr: 'Accès illimité', en: 'Unlimited access' },
+            'ind1-btn': { fr: 'Acheter – 300$ →', en: 'Buy – $300 →' },
+            'ind2-desc': { fr: "Trace automatiquement des trendlines à partir des pivots du marché. Des zones <span style=\"color:#4ade80;font-weight:600;\">vertes (hausse)</span> et <span style=\"color:#f87171;font-weight:600;\">rouges (baisse)</span> s'ajustent à la volatilité.", en: "Automatically draws trendlines from market pivots. <span style=\"color:#4ade80;font-weight:600;\">Green zones (uptrend)</span> and <span style=\"color:#f87171;font-weight:600;\">red zones (downtrend)</span> adjust to volatility." },
+            'ind2-item1': { fr: '<span class="font-semibold text-white">Cassures détectées</span> – signaux BREAK BULLISH / BEARISH automatiques', en: '<span class="font-semibold text-white">Breakouts detected</span> – automatic BREAK BULLISH / BEARISH signals' },
+            'ind2-item2': { fr: '<span class="font-semibold text-white">Rebonds identifiés</span> – signaux BUY/SELL sur les lignes de tendance', en: '<span class="font-semibold text-white">Bounces identified</span> – BUY/SELL signals on trendlines' },
+            'ind2-item3': { fr: '<span class="font-semibold text-white">Target & Stop Loss</span> – calculés automatiquement lors d\'un BREAK', en: '<span class="font-semibold text-white">Target & Stop Loss</span> – automatically calculated on a BREAK' },
+            'ind2-item4': { fr: '<span class="font-semibold text-white">Swing highs/lows</span> – affichage 5 min, graphique clair', en: '<span class="font-semibold text-white">Swing highs/lows</span> – 5 min display, clean chart' },
+            'ind2-btn': { fr: 'Acheter – 300$ →', en: 'Buy – $300 →' },
+            'recommended': { fr: '⭐ RECOMMANDÉ', en: '⭐ RECOMMENDED' },
+            'combo-save': { fr: '🔥 ÉCONOMISEZ 100$', en: '🔥 SAVE $100' },
+            'combo-title': { fr: 'Combo Indicateur', en: 'Indicator Combo' },
+            'combo-desc': { fr: "Obtenez les deux indicateurs ensemble et économisez 100$. Le duo parfait pour maximiser votre avantage sur les marchés.", en: 'Get both indicators together and save $100. The perfect duo to maximize your market edge.' },
+            'combo-item1': { fr: 'Support & Resistance Power Zones', en: 'Support & Resistance Power Zones' },
+            'combo-item2': { fr: 'Trendline Fusion', en: 'Trendline Fusion' },
+            'combo-item3': { fr: 'Accès illimité aux deux outils', en: 'Unlimited access to both tools' },
+            'combo-old-price': { fr: '600$ séparément', en: '$600 separately' },
+            'combo-payment': { fr: 'Paiement unique - Les deux indicateurs', en: 'One-time payment - Both indicators' },
+            'combo-btn': { fr: 'Acheter le Combo – 500$ →', en: 'Buy the Combo – $500 →' },
+            'ind-note': { fr: 'Les deux indicateurs sont aussi <span class="font-semibold" style="color:#F97316;">inclus gratuitement</span> avec la Formation Complète à 1000$', en: 'Both indicators are also <span class="font-semibold" style="color:#F97316;">included for free</span> with the Complete Course at $1000' },
+            // ── OUTILS ──
+            'tools-title': { fr: "Les outils que j'utilise", en: 'The tools I use' },
+            'tools-subtitle': { fr: 'Les outils et stratégies qui me permettent d\'être rentable et consistant', en: 'The tools and strategies that allow me to be profitable and consistent' },
+            'tools-edge-title': { fr: 'Mon Edge Personnel', en: 'My Personal Edge' },
+            'tools-edge-text': { fr: "Ma technique de trading combinant l'analyse technique avancée et la gestion psychologique du risque. Vous apprendrez exactement ma façon de placer mes positions et comment je gère mon capital avec discipline.", en: "My trading technique combining advanced technical analysis and psychological risk management. You will learn exactly how I place my positions and manage my capital with discipline." },
+            'tools-edge-label': { fr: '✓ Inclus à la Formation Complète', en: '✓ Included in the Complete Course' },
+            'tools-edge-sublabel': { fr: 'La fondation de ma rentabilité', en: 'The foundation of my profitability' },
+            'tools-ind-title': { fr: 'Mon Indicateur Propriétaire', en: 'My Proprietary Indicator' },
+            'tools-ind-text': { fr: "Un outil que j'ai développé et optimisé au fil des années de trading réel. Cet indicateur vous donne un avantage supplémentaire pour identifier les opportunités de trading avec plus de précision.", en: "A tool I developed and optimized over years of real trading. This indicator gives you an extra edge to identify trading opportunities with greater precision." },
+            'tools-ind-label': { fr: '✓ Inclus à la Formation Complète', en: '✓ Included in the Complete Course' },
+            'tools-ind-sublabel': { fr: 'Formation complète sur son utilisation quotidienne', en: 'Complete training on its daily use' },
+            'tools-cta': { fr: 'Ces deux outils combinés = <span style="color:#F97316;">ta méthode personnalisée pour être profitable et consistant</span>', en: 'These two tools combined = <span style="color:#F97316;">your personalized method to be profitable and consistent</span>' },
+            // ── FAQ ──
+            'faq-title': { fr: 'Questions Fréquentes', en: 'Frequently Asked Questions' },
+            'faq1-q': { fr: 'Quel est le capital minimum pour commencer?', en: 'What is the minimum capital to start?' },
+            'faq1-a': { fr: "Pour la Phase Démo, zéro capital requis - vous pratiquez sur un compte de démonstration. Pour passer à la Phase 3 (réel), je recommande un minimum de 500-1000$ pour une gestion prudente du risque.", en: "For the Demo Phase, zero capital required - you practice on a demo account. To move to Phase 3 (real), I recommend a minimum of $500-1000 for careful risk management." },
+            'faq2-q': { fr: 'Combien de temps avant de devenir rentable?', en: 'How long before becoming profitable?' },
+            'faq2-a': { fr: "Cela dépend de votre engagement. Avec la formation complète et la discipline, la plupart des traders voient des résultats positifs en 2-4 mois en démo. Le passage au réel nécessite généralement 3-6 mois supplémentaires.", en: "It depends on your commitment. With the complete course and discipline, most traders see positive results in 2-4 months on demo. Going live generally requires an additional 3-6 months." },
+            'faq3-q': { fr: 'La formation couvre-t-elle plusieurs marchés ou juste le Forex?', en: 'Does the course cover multiple markets or just Forex?' },
+            'faq3-a': { fr: "La formation couvre tous les marchés: Forex, Or (XAUUSD), Commodités (pétrole, gaz naturel, etc.) et Métaux précieux. Les principes sont identiques pour tous.", en: "The course covers all markets: Forex, Gold (XAUUSD), Commodities (oil, natural gas, etc.) and Precious Metals. The principles are the same for all." },
+            'faq4-q': { fr: 'Quelle est la différence entre Formation Compacte et Formation Complète?', en: 'What is the difference between Compact and Complete Course?' },
+            'faq4-a': { fr: "La Formation Compacte vous enseigne les fondamentaux solides des 3 phases. La Formation Complète ajoute: un coaching personnalisé intensif pendant 6 mois, l'accès à mon edge personnel et mon indicateur propriétaire.", en: "The Compact Course teaches you the solid fundamentals of the 3 phases. The Complete Course adds: intensive personalized coaching for 6 months, access to my personal edge and proprietary indicator." },
+            'faq5-q': { fr: 'Avez-vous des garanties de profit ou de remboursement?', en: 'Do you have profit or refund guarantees?' },
+            'faq5-a': { fr: "Non. Le trading comporte des risques et aucune formation ne peut garantir des profits. Ce que je garantis: une formation solide basée sur mes 3+ ans de rentabilité, un accompagnement sérieux et de vraies stratégies.", en: "No. Trading involves risks and no course can guarantee profits. What I guarantee: a solid course based on my 3+ years of profitability, serious mentorship and real strategies." },
+            'faq6-q': { fr: 'Quel broker/plateforme recommandez-vous?', en: 'Which broker/platform do you recommend?' },
+            'faq6-a': { fr: "Je recommande MetaTrader 5 (MT5) comme plateforme car c'est ce que j'utilise. Pour les brokers, je conseille ceux régulés et fiables.", en: "I recommend MetaTrader 5 (MT5) as the platform since that is what I use. For brokers, I recommend regulated and reliable ones." },
+            'faq7-q': { fr: 'Dois-je avoir des connaissances préalables en trading?', en: 'Do I need prior trading knowledge?' },
+            'faq7-a': { fr: "Non! La formation est conçue pour les débutants complets ET les traders avec expérience. Chacun progresse à son rythme.", en: "No! The course is designed for complete beginners AND experienced traders. Everyone progresses at their own pace." },
+            'faq8-q': { fr: 'Combien de temps par jour dois-je consacrer au trading?', en: 'How much time per day should I dedicate to trading?' },
+            'faq8-a': { fr: "Avec ma méthode, vous pouvez trader 30min-2h par jour pendant vos sessions préférées. La discipline et la qualité des trades comptent plus que le temps passé.", en: "With my method, you can trade 30min-2h per day during your preferred sessions. Discipline and trade quality matter more than time spent." },
+            'faq9-q': { fr: "L'accompagnement 6 mois signifie quoi exactement?", en: 'What exactly does the 6-month support mean?' },
+            'faq9-a': { fr: "Pour la Formation Complète: 6 mois d'accès direct à moi pour questions illimitées, revue de vos charts et trades réels, feedback personnalisé, conseil psychologique et stratégies de scaling.", en: "For the Complete Course: 6 months of direct access to me for unlimited questions, review of your charts and real trades, personalized feedback, psychological advice and scaling strategies." },
+            'faq-cta': { fr: "D'autres questions?", en: 'More questions?' },
+            'faq-cta-link': { fr: 'Contactez-moi directement →', en: 'Contact me directly →' },
+            // ── ACCÈS DOCUMENTS ──
+            'docs-title': { fr: 'Comment accéder à votre formation?', en: 'How to access your course?' },
+            'docs-step1-title': { fr: 'Étape 1: Effectuez le paiement', en: 'Step 1: Make the payment' },
+            'docs-step1-text': { fr: 'Cliquez sur "Acheter maintenant" et complétez le paiement sécurisé via Stripe.', en: 'Click "Buy now" and complete the secure payment via Stripe.' },
+            'docs-step2-title': { fr: 'Étape 2: Recevez les documents', en: 'Step 2: Receive the documents' },
+            'docs-step2-text': { fr: 'Après le paiement, les documents Word de votre formation sont envoyés à votre email automatiquement.', en: 'After payment, the Word documents for your course are sent to your email automatically.' },
+            'docs-step3-title': { fr: 'Étape 3: Accédez au cloud', en: 'Step 3: Access the cloud' },
+            'docs-step3-text': { fr: 'Les documents sont sur un cloud gratuit. Aucun besoin de payer ou télécharger Word.', en: 'Documents are on a free cloud. No need to pay for or download Word.' },
+            'docs-about-title': { fr: '📋 À propos de vos documents', en: '📋 About your documents' },
+            'docs-item1': { fr: '<span class="font-semibold">Format Word:</span> Les documents sont en format .docx (lisible partout)', en: '<span class="font-semibold">Word format:</span> Documents are in .docx format (readable everywhere)' },
+            'docs-item2': { fr: '<span class="font-semibold">Pas besoin de payer:</span> Accès gratuit au cloud - aucun abonnement Word payant requis', en: '<span class="font-semibold">No need to pay:</span> Free cloud access - no paid Word subscription required' },
+            'docs-item3': { fr: '<span class="font-semibold">Accès en ligne:</span> Consultez depuis n\'importe quel appareil', en: '<span class="font-semibold">Online access:</span> View from any device' },
+            'docs-item4': { fr: '<span class="font-semibold">Accès illimité:</span> Une fois payé, vous avez accès à vie aux documents', en: '<span class="font-semibold">Unlimited access:</span> Once paid, you have lifetime access to the documents' },
+            'docs-item5': { fr: '<span class="font-semibold">Téléchargement optionnel:</span> Vous pouvez télécharger et sauvegarder si vous le souhaitez', en: '<span class="font-semibold">Optional download:</span> You can download and save if you wish' },
+            // ── CONTACT ──
+            'contact-title': { fr: 'Prêt à commencer?', en: 'Ready to start?' },
+            'contact-subtitle': { fr: 'Contactez-moi directement pour démarrer votre formation.', en: 'Contact me directly to start your course.' },
+            'contact-tg-free': { fr: 'Groupe Telegram Gratuit', en: 'Free Telegram Group' },
+            'contact-tg-free-desc': { fr: 'Rejoignez pour des prédictions et analyses chaque semaine', en: 'Join for weekly predictions and market analysis' },
+            'contact-tg-free-link': { fr: 'Totalement gratuit - Cliquez pour rejoindre →', en: 'Completely free - Click to join →' },
+            'contact-email-label': { fr: 'Email direct', en: 'Direct email' },
+            'contact-tg-label': { fr: 'Telegram (plus rapide)', en: 'Telegram (faster)' },
+            'contact-btn1': { fr: 'Rejoindre Telegram →', en: 'Join Telegram →' },
+            'contact-btn2': { fr: 'Envoyer un email →', en: 'Send an email →' },
+            'contact-btn3': { fr: 'Ouvrir Telegram →', en: 'Open Telegram →' },
+            'contact-mention': { fr: 'Mentionne "Formation Trading" pour une réponse plus rapide', en: 'Mention "Trading Course" for a faster response' },
+            // ── FOOTER ──
+            'footer-tagline': { fr: 'Si vous êtes patient, discipliné et prêt à travailler votre mental...', en: 'If you are patient, disciplined and ready to work on your mindset...' },
+            'footer-cta': { fr: 'Cette formation vous met sur les rails pour devenir rentable et consistant.', en: 'This course puts you on track to become profitable and consistent.' },
+            'footer-copy': { fr: "© Samuel D'amours/EmberTrading, 2026. Tous droits réservés.", en: "© Samuel D'amours/EmberTrading, 2026. All rights reserved." },
+            'footer-disclaimer-title': { fr: 'Clause de non-responsabilité :', en: 'Disclaimer:' },
+            'footer-disclaimer': { fr: "Les analyses partagées le sont à titre informatif et éducatif uniquement. Elles ne constituent ni une recommandation d'achat ou de vente, ni un conseil en investissement.", en: "The analyses shared are for informational and educational purposes only. They do not constitute a buy or sell recommendation, nor investment advice." },
+            'footer-risk': { fr: "Risque élevé : Le trading sur le Forex comporte des risques importants et peut entraîner la perte totale du capital investi.", en: "High risk: Forex trading involves significant risks and may result in the total loss of invested capital." },
+        };
+
+        function toggleLang() {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            const btn = document.getElementById('lang-btn');
+            btn.textContent = currentLang === 'fr' ? '🌐 EN' : '🌐 FR';
+            document.documentElement.lang = currentLang;
+            document.title = translations['page-title'][currentLang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[key]) {
+                    el.innerHTML = translations[key][currentLang];
+                }
+            });
+            // Update nav buttons
+            document.querySelectorAll('[data-fr]').forEach(el => {
+                const key = currentLang === 'fr' ? 'data-fr' : 'data-en';
+                el.textContent = el.getAttribute(key);
+            });
         }
     </script>
 </body>
