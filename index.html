@@ -145,6 +145,7 @@
                     <button onclick="scrollToSection('programme')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300" data-fr="Programme" data-en="Program">Programme</button>
                     <button onclick="scrollToSection('indicateurs')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300" data-fr="Indicateurs" data-en="Indicators">Indicateurs</button>
                     <button onclick="scrollToSection('faq')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300">FAQ</button>
+                    <button onclick="scrollToSection('vip')" class="text-sm font-bold transition cursor-pointer" style="color:#F97316;" data-fr="VIP" data-en="VIP">VIP</button>
                     <button onclick="scrollToSection('contact')" class="text-sm hover:text-orange-400 transition cursor-pointer text-gray-300" data-fr="Contact" data-en="Contact">Contact</button>
                     <!-- Language toggle -->
                     <button onclick="toggleLang()" id="lang-btn" class="text-xs font-bold px-3 py-1 rounded-full transition cursor-pointer" style="border:1px solid rgba(234,88,12,0.6);color:#F97316;background:rgba(234,88,12,0.1);">
@@ -579,6 +580,7 @@
                                         <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item8">Revue complète de vos trades réels</span></li>
                                         <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item9">Accès direct avec questions illimitées</span></li>
                                         <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item10">Support psychologique et conseils de scaling</span></li>
+                                        <li class="flex gap-3 text-sm"><span style="color:#F97316;" class="flex-shrink-0">✓</span><span class="text-gray-300" data-i18n="complete-item11">📢 Groupe VIP Telegram — positions daily envoyées en direct</span></li>
                                     </ul>
                                 </div>
                                 <div class="rounded p-4 mt-4" style="background:rgba(234,88,12,0.12);border:1px solid rgba(234,88,12,0.4);">
@@ -614,6 +616,7 @@
                                 <li data-i18n="compare-complete3">✓ Vous voulez accès à mes outils (edge et indicateur)</li>
                                 <li data-i18n="compare-complete4">✓ Vous voulez une véritable relation de mentorat 6 mois</li>
                                 <li data-i18n="compare-complete5">✓ Vous êtes prêt à investir pour transformer votre vie</li>
+                                <li data-i18n="compare-complete6">✓ Vous voulez accès au groupe VIP Telegram (positions daily)</li>
                             </ul>
                         </div>
                     </div>
@@ -775,6 +778,46 @@
             </div>
         </section>
 
+
+        <div class="fire-divider"></div>
+
+        <!-- ═══════════ GROUPE VIP TELEGRAM ═══════════ -->
+        <section id="vip" class="py-20 px-6 relative" style="background:linear-gradient(180deg,rgba(234,88,12,0.07) 0%,transparent 100%);">
+            <div class="max-w-2xl mx-auto relative z-10 text-center">
+
+                <div class="text-5xl mb-4">📢</div>
+                <h2 class="text-4xl font-black mb-4" data-i18n="vip-title">Groupe VIP Telegram</h2>
+                <p class="text-gray-300 mb-8 text-lg" data-i18n="vip-subtitle">Recevez mes positions daily en direct sur Telegram.</p>
+
+                <div class="card p-8" style="border:1px solid rgba(234,88,12,0.4);">
+
+                    <p class="text-gray-300 mb-6 text-base leading-relaxed" data-i18n="vip-desc">
+                        Pour avoir accès au groupe VIP et recevoir mes positions daily, rejoignez d'abord le groupe Telegram gratuit puis contactez-moi directement en mentionnant <span style="color:#F97316;font-weight:700;">« VIP »</span>.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://t.me/yashysako" target="_blank" rel="noopener noreferrer"
+                           class="btn-fire px-8 py-3 font-bold text-base" data-i18n="vip-btn">
+                            Rejoindre le groupe Telegram →
+                        </a>
+                    </div>
+
+                    <p class="text-gray-500 text-sm mt-6" data-i18n="vip-note">💡 Inclus gratuitement avec la Formation Complète à 1000$</p>
+
+                    <!-- Management de compte -->
+                    <div class="mt-8 pt-6" style="border-top:1px solid rgba(234,88,12,0.25);">
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl flex-shrink-0">🔐</span>
+                            <div>
+                                <p class="font-bold mb-1" style="color:#F97316;" data-i18n="vip-mgmt-title">Management de compte MT5 — VIP exclusif</p>
+                                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="vip-mgmt-desc">Je gère votre compte MT5 directement pour les membres VIP. Contactez-moi sur Telegram pour plus d'informations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
         <div class="fire-divider"></div>
 
         <!-- ═══════════ FAQ ═══════════ -->
@@ -827,7 +870,7 @@
                             <div class="flex-1">
                                 <h3 class="font-bold text-lg mb-2" data-i18n="faq4-q">Quelle est la différence entre Formation Compacte et Formation Complète?</h3>
                                 <div class="faq-answer hidden text-gray-300 text-sm leading-relaxed pt-2">
-                                    <p data-i18n="faq4-a">La Formation Compacte vous enseigne les fondamentaux solides des 3 phases. La Formation Complète ajoute: un coaching personnalisé intensif pendant 6 mois, l'accès à mon edge personnel et mon indicateur propriétaire.</p>
+                                    <p data-i18n="faq4-a">La Formation Compacte vous enseigne les fondamentaux solides des 3 phases. La Formation Complète ajoute: un coaching personnalisé intensif pendant 6 mois, l'accès à mon edge personnel, mon indicateur propriétaire et l'accès au groupe VIP Telegram avec mes positions daily.</p>
                                 </div>
                             </div>
                         </div>
@@ -1164,6 +1207,7 @@
             'complete-item8': { fr: 'Revue complète de vos trades réels', en: 'Full review of your real trades' },
             'complete-item9': { fr: 'Accès direct avec questions illimitées', en: 'Direct access with unlimited questions' },
             'complete-item10': { fr: 'Support psychologique et conseils de scaling', en: 'Psychological support and scaling advice' },
+            'complete-item11': { fr: '📢 Groupe VIP Telegram — positions daily envoyées en direct', en: '📢 VIP Telegram group — daily positions sent live' },
             'complete-indicator-label': { fr: "🤖 L'indicateur propriétaire est inclus dans le prix", en: '🤖 The proprietary indicator is included in the price' },
             'complete-indicator-text': { fr: 'Formation complète sur son utilisation quotidienne', en: 'Complete training on its daily use' },
             'complete-btn': { fr: 'Acheter maintenant - 1000$ →', en: 'Buy now - $1000 →' },
@@ -1179,6 +1223,7 @@
             'compare-complete3': { fr: 'Vous voulez accès à mes outils (edge et indicateur)', en: 'You want access to my tools (edge and indicator)' },
             'compare-complete4': { fr: 'Vous voulez une véritable relation de mentorat 6 mois', en: 'You want a real 6-month mentorship relationship' },
             'compare-complete5': { fr: 'Vous êtes prêt à investir pour transformer votre vie', en: 'You are ready to invest to transform your life' },
+            'compare-complete6': { fr: '✓ Vous voulez accès au groupe VIP Telegram (positions daily)', en: '✓ You want access to the VIP Telegram group (daily positions)' },
             // ── INDICATEURS ──
             'ind-title': { fr: 'Mes Indicateurs de Trading', en: 'My Trading Indicators' },
             'ind-subtitle': { fr: "Des outils développés et optimisés à partir de mon expérience réelle sur les marchés", en: 'Tools developed and optimized from my real market experience' },
@@ -1239,6 +1284,14 @@
             'faq9-q': { fr: "L'accompagnement 6 mois signifie quoi exactement?", en: 'What exactly does the 6-month support mean?' },
             'faq9-a': { fr: "Pour la Formation Complète: 6 mois d'accès direct à moi pour questions illimitées, revue de vos charts et trades réels, feedback personnalisé, conseil psychologique et stratégies de scaling.", en: "For the Complete Course: 6 months of direct access to me for unlimited questions, review of your charts and real trades, personalized feedback, psychological advice and scaling strategies." },
             'faq-cta': { fr: "D'autres questions?", en: 'More questions?' },
+            'nav-vip': { fr: 'VIP', en: 'VIP' },
+            'vip-title': { fr: 'Groupe VIP Telegram', en: 'VIP Telegram Group' },
+            'vip-subtitle': { fr: 'Recevez mes positions daily en direct sur Telegram.', en: 'Receive my daily positions live on Telegram.' },
+            'vip-desc': { fr: 'Pour avoir accès au groupe VIP et recevoir mes positions daily, rejoignez d\'abord le groupe Telegram gratuit puis contactez-moi directement en mentionnant <span style="color:#F97316;font-weight:700;">« VIP »</span>.', en: 'To access the VIP group and receive my daily positions, first join the free Telegram group then contact me directly mentioning <span style="color:#F97316;font-weight:700;">"VIP"</span>.' },
+            'vip-btn': { fr: 'Rejoindre le groupe Telegram →', en: 'Join the Telegram group →' },
+            'vip-note': { fr: '💡 Inclus gratuitement avec la Formation Complète à 1000$', en: '💡 Included for free with the Complete Course at $1000' },
+            'vip-mgmt-title': { fr: 'Management de compte MT5 — VIP exclusif', en: 'MT5 Account Management — VIP exclusive' },
+            'vip-mgmt-desc': { fr: 'Je gère votre compte MT5 directement pour les membres VIP. Contactez-moi sur Telegram pour plus d\'informations.', en: 'I manage your MT5 account directly for VIP members. Contact me on Telegram for more information.' },
             'faq-cta-link': { fr: 'Contactez-moi directement →', en: 'Contact me directly →' },
             // ── ACCÈS DOCUMENTS ──
             'docs-title': { fr: 'Comment accéder à votre formation?', en: 'How to access your course?' },
