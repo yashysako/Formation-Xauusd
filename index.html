@@ -167,8 +167,7 @@ a:hover~#cursor,button:hover~#cursor{width:16px;height:16px}
 @keyframes fadeSlideUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 
 /* ── HERO RIGHT — dual chart widgets ────────────────────────── */
-.hero-right{position:relative;z-index:1;display:flex;flex-direction:column;gap:1rem;
-  opacity:0;animation:fadeSlideUp 1s .4s forwards}
+.hero-right{position:relative;z-index:1;display:flex;flex-direction:column;gap:1rem;}
 @media(max-width:900px){.hero-right{display:flex}}
 .chart-widget{background:rgba(22,30,40,0.85);border:1px solid var(--border);backdrop-filter:blur(8px);
   border-radius:8px;overflow:hidden;position:relative}
@@ -811,6 +810,149 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   opacity: .45;
 }
 
+
+/* ════════════════════════════════════════════════════════════════
+   QUIZ INTERACTIF
+════════════════════════════════════════════════════════════════ */
+.quiz-wrap {
+  position: relative; z-index: 1;
+  min-height: 200px;
+  background: rgba(22,30,40,0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(249,115,22,.3);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 520px;
+  width: 100%;
+}
+.quiz-wrap::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--fire3), var(--fire), var(--amber));
+}
+.quiz-header {
+  padding: 1.25rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.quiz-intro {
+  font-size: .82rem; color: var(--text2); line-height: 1.65;
+  padding: 1rem 1.5rem; border-bottom: 1px solid var(--border);
+}
+.quiz-intro strong { color: var(--fire); }
+.quiz-progress-bar {
+  height: 3px; background: var(--border); margin: 0;
+}
+.quiz-progress-fill {
+  height: 100%; background: linear-gradient(90deg, var(--fire3), var(--amber));
+  transition: width .4s ease; border-radius: 0 2px 2px 0;
+}
+.quiz-body { padding: 1.25rem 1.5rem; }
+.quiz-q-num {
+  font-family: var(--mono); font-size: .65rem; color: var(--fire);
+  letter-spacing: .1em; text-transform: uppercase; margin-bottom: .5rem;
+}
+.quiz-question {
+  font-size: .92rem; font-weight: 600; color: var(--text);
+  line-height: 1.5; margin-bottom: 1rem;
+}
+.quiz-options { display: flex; flex-direction: column; gap: .5rem; }
+.quiz-opt {
+  display: flex; align-items: center; gap: .75rem;
+  padding: .7rem 1rem; border-radius: 6px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  cursor: pointer; transition: all .2s;
+  font-size: .85rem; color: var(--text2);
+  font-family: var(--sans); text-align: left; width: 100%;
+}
+.quiz-opt:hover:not(:disabled) {
+  border-color: rgba(249,115,22,.4); color: var(--text);
+  background: rgba(249,115,22,.06);
+}
+.quiz-opt.correct {
+  border-color: var(--green); color: var(--green);
+  background: rgba(0,212,170,.08);
+}
+.quiz-opt.wrong {
+  border-color: var(--red); color: var(--red);
+  background: rgba(255,71,87,.08);
+}
+.quiz-opt:disabled { cursor: default; }
+.opt-bullet {
+  font-family: var(--mono); font-size: .72rem; font-weight: 600;
+  color: var(--fire); flex-shrink: 0; width: 18px;
+}
+.quiz-opt.correct .opt-bullet { color: var(--green); }
+.quiz-opt.wrong .opt-bullet { color: var(--red); }
+.quiz-feedback {
+  font-size: .78rem; color: var(--text2); margin-top: .75rem;
+  padding: .6rem .85rem; border-radius: 5px;
+  background: rgba(255,255,255,.04); border-left: 2px solid var(--fire);
+  display: none; line-height: 1.55;
+}
+.quiz-feedback.show { display: block; }
+.quiz-next {
+  margin-top: 1rem; width: 100%;
+  padding: .65rem; border-radius: 6px;
+  border: none; cursor: pointer;
+  font-family: var(--mono); font-size: .76rem; font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase;
+  background: var(--fire); color: #000;
+  transition: all .2s; display: none;
+}
+.quiz-next.show { display: block; }
+.quiz-next:hover { background: var(--ember); }
+.quiz-footer {
+  padding: .75rem 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.quiz-score-lbl {
+  font-family: var(--mono); font-size: .68rem; color: var(--text3);
+  letter-spacing: .06em;
+}
+.quiz-score-val {
+  font-family: var(--mono); font-size: .85rem; font-weight: 600;
+  color: var(--fire);
+}
+/* Result screen */
+.quiz-result { padding: 1.75rem 1.5rem; text-align: center; }
+.quiz-result-ico { font-size: 2.5rem; margin-bottom: .75rem; }
+.quiz-result-title {
+  font-family: var(--display); font-size: 1.8rem;
+  letter-spacing: .04em; margin-bottom: .5rem;
+}
+.quiz-result-title.win { color: var(--green); }
+.quiz-result-title.lose { color: var(--red); }
+.quiz-result-msg {
+  font-size: .85rem; color: var(--text2); line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+.quiz-promo-box {
+  background: rgba(0,212,170,.08);
+  border: 1px solid rgba(0,212,170,.3);
+  border-radius: 8px; padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.quiz-promo-code {
+  font-family: var(--mono); font-size: 1.3rem; font-weight: 700;
+  color: var(--green); letter-spacing: .15em;
+}
+.quiz-promo-label {
+  font-size: .78rem; color: var(--text2); margin-top: .3rem;
+}
+.quiz-already-done {
+  padding: 1.5rem; text-align: center;
+  font-size: .85rem; color: var(--text2); line-height: 1.7;
+}
+.quiz-already-done strong { color: var(--fire); }
+@media (max-width: 640px) {
+  .quiz-wrap { max-width: 100%; }
+  .quiz-header, .quiz-body, .quiz-footer { padding-left: 1rem; padding-right: 1rem; }
+  .quiz-intro { padding: .85rem 1rem; }
+  .quiz-question { font-size: .88rem; }
+  .quiz-opt { font-size: .82rem; padding: .6rem .85rem; }
+}
+
 </style>
 </head>
 <body>
@@ -907,58 +1049,28 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
       </div>
     </div>
 
-    <!-- Right — dual animated chart widgets -->
-    <div class="hero-right">
-      <!-- XAUUSD -->
-      <div class="chart-widget">
-        <div class="cw-head">
-          <div>
-            <div class="cw-pair">XAU<span style="color:var(--text2)">USD</span></div>
-            <div style="font-family:var(--mono);font-size:.6rem;color:var(--text3)">Gold / US Dollar</div>
-            <div class="mkt-status mkt-open" id="xau-status"><span class="mkt-dot"></span><span id="xau-status-txt">LIVE</span></div>
-          </div>
-          <div style="text-align:right">
-            <div class="cw-price cw-up" id="xau-price">4 493.00</div>
-            <div class="cw-change cw-up" id="xau-chg">▲ +114.86 (+2.62%)</div>
-          </div>
-          <span class="cw-badge cm">COMMODITY</span>
-        </div>
-        <div class="cw-body">
-          <canvas class="candle-chart" id="cv-xau" width="400" height="110"></canvas>
-        </div>
-        <div class="ohlc-row">
-          <div class="ohlc-cell"><div class="ohlc-lbl">OPEN</div><div class="ohlc-val" id="xau-o">4 378.14</div></div>
-          <div class="ohlc-cell"><div class="ohlc-lbl">HIGH</div><div class="ohlc-val up" id="xau-h">4 556.15</div></div>
-          <div class="ohlc-cell"><div class="ohlc-lbl">LOW</div><div class="ohlc-val dn" id="xau-l">4 375.49</div></div>
-          <div class="ohlc-cell"><div class="ohlc-lbl">VOL</div><div class="ohlc-val">142K</div></div>
-        </div>
-      </div>
 
-      <!-- XAGUSD -->
-      <div class="chart-widget">
-        <div class="cw-head">
-          <div>
-            <div class="cw-pair">XAG<span style="color:var(--text2)">USD</span></div>
-            <div style="font-family:var(--mono);font-size:.6rem;color:var(--text3)">Silver / US Dollar</div>
-            <div class="mkt-status mkt-open" id="xag-status"><span class="mkt-dot"></span><span id="xag-status-txt">LIVE</span></div>
-          </div>
-          <div style="text-align:right">
-            <div class="cw-price cw-up" id="xag-price">74.21</div>
-            <div class="cw-change cw-up" id="xag-chg">▲ +1.40 (+1.92%)</div>
-          </div>
-          <span class="cw-badge cm">METAL</span>
-        </div>
-        <div class="cw-body">
-          <canvas class="candle-chart" id="cv-xag" width="400" height="110"></canvas>
-        </div>
-        <div class="ohlc-row">
-          <div class="ohlc-cell"><div class="ohlc-lbl">OPEN</div><div class="ohlc-val" id="xag-o">72.81</div></div>
-          <div class="ohlc-cell"><div class="ohlc-lbl">HIGH</div><div class="ohlc-val up" id="xag-h">74.56</div></div>
-          <div class="ohlc-cell"><div class="ohlc-lbl">LOW</div><div class="ohlc-val dn" id="xag-l">72.03</div></div>
-          <div class="ohlc-cell"><div class="ohlc-lbl">VOL</div><div class="ohlc-val">87K</div></div>
-        </div>
-      </div>
-    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── QUIZ ─────────────────────────────────────────────────────────────────── -->
+<section id="quiz" style="padding:4rem 0">
+  <div class="wrap" style="max-width:680px">
+    <div class="quiz-wrap" id="quiz-container">
+  <div class="quiz-header">
+    <div class="quiz-q-num" id="quiz-label">QUIZ TRADING</div>
+    <div style="font-family:var(--display);font-size:1.2rem;letter-spacing:.03em;color:var(--text);line-height:1.2" id="quiz-title">Tu crois mériter une réduction ?</div>
+  </div>
+  <div class="quiz-intro" id="quiz-intro-txt">Tu penses avoir déjà des bases solides en trading ? Prouve-le. Réponds à ce quiz et obtiens <strong>20&nbsp;% de rabais</strong> avec 10/10 bonnes réponses, ou <strong>10&nbsp;% de rabais</strong> avec 9/10.</div>
+  <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="qbar" style="width:0%"></div></div>
+  <div id="qbody" class="quiz-body"></div>
+  <div class="quiz-footer">
+    <span class="quiz-score-lbl">SCORE</span>
+    <span class="quiz-score-val" id="qscore">0 / 10</span>
+  </div>
+</div>
   </div>
 </section>
 
@@ -1684,6 +1796,7 @@ document.querySelectorAll('.sec-tag').forEach(el => el.classList.add('rv-l'));
 
 // ── i18n ────────────────────────────────────────────────────────
 let currentLang = 'fr';
+        window.currentLang = currentLang;
 
 const translations = {
             // ── PAGE TITLE ──
@@ -1912,6 +2025,7 @@ const translations = {
 
         function toggleLang() {
             currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            window.currentLang = currentLang;
             // Refresh market status text
             ['xau','xag'].forEach(sym => {
               const el = document.getElementById(sym + '-status');
@@ -1931,6 +2045,16 @@ const translations = {
             document.querySelectorAll('[data-fr]').forEach(el => {
                 el.textContent = currentLang === 'fr' ? el.getAttribute('data-fr') : el.getAttribute('data-en');
             });
+            // Refresh quiz language
+            var ql=document.getElementById('quiz-label');
+            var qt=document.getElementById('quiz-title');
+            var qi=document.getElementById('quiz-intro-txt');
+            if(ql)ql.textContent=currentLang==='en'?'TRADING QUIZ':'QUIZ TRADING';
+            if(qt)qt.textContent=currentLang==='en'?'Think you deserve a discount?':'Tu crois mériter une réduction ?';
+            if(qi)qi.innerHTML=currentLang==='en'
+              ?'Think you already have solid trading fundamentals? Prove it. Answer this quiz and get a <strong>20% discount</strong> with 10/10 correct answers, or a <strong>10% discount</strong> with 9/10.'
+              :'Tu penses avoir déjà des bases solides en trading ? Prouve-le. Réponds à ce quiz et obtiens <strong>20 % de rabais</strong> avec 10/10 bonnes réponses, ou <strong>10 % de rabais</strong> avec 9/10.';
+            if(window._quizRefreshLang)window._quizRefreshLang();
         }
 
 </script>
@@ -2337,5 +2461,205 @@ const translations = {
 })();
 </script>
 
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+(function(){
+  var KEY='et_quiz6';
+  var qb=document.getElementById('qbody');
+  var qbar=document.getElementById('qbar');
+  var qsc=document.getElementById('qscore');
+  if(!qb){return;}
+
+  function gl(){return window.currentLang==='en'?'en':'fr';}
+
+  var QS={
+    fr:[
+      {q:"Lors d'une tendance haussière, faut-il des achats ou des ventes ?",a:["Achats (BUY)","Ventes (SELL)","Les deux","Aucun"],c:0,e:"En uptrend : achats uniquement. Toujours trader dans le sens de la tendance."},
+      {q:"Le support se trouve en haut ou en bas du graphique ?",a:["En haut — plafond","En bas — plancher","Au milieu","Ça dépend"],c:1,e:"Le support est un plancher : le prix rebondit vers le haut depuis ce niveau."},
+      {q:"Qu'est-ce qu'une résistance ?",a:["Un niveau où le prix rebondit vers le haut","Un plafond où le prix a du mal à monter","Une zone de forte volatilité","Un signal d'entrée"],c:1,e:"La résistance est un plafond : les vendeurs repoussent le prix vers le bas à ce niveau."},
+      {q:"Que signifie Higher High ?",a:["Un bas plus bas que le précédent","Un sommet plus haut que le sommet précédent","Un bas plus haut","Un sommet identique"],c:1,e:"Higher High = chaque nouveau sommet dépasse le précédent. C'est le signe d'une force haussière."},
+      {q:"SL signifie ?",a:["Short Level","Stop Loss","Signal Long","Support Level"],c:1,e:"Stop Loss = ordre automatique pour limiter les pertes à un niveau prédéfini. Indispensable."},
+      {q:"Qu'est-ce qu'un marché en range ?",a:["Un marché en forte hausse","Un prix oscillant entre support et résistance sans tendance","Un marché très volatil","Un marché baissier"],c:1,e:"Range = le prix oscille entre support et résistance sans direction claire. Éviter les trades directionnels."},
+      {q:"Qu'est-ce qu'un chandelier (bougie japonaise) ?",a:["Un indicateur de volume","Une représentation visuelle du prix : ouverture, fermeture, haut, bas","Un signal d'achat automatique","Un type de compte de trading"],c:1,e:"La bougie japonaise affiche 4 données : ouverture, fermeture, plus haut et plus bas sur une période donnée."},
+      {q:"Trader dans le sens de la tendance signifie ?",a:["Acheter quand le prix descend","BUY en uptrend / SELL en downtrend","Trader n'importe quand","Attendre un renversement"],c:1,e:"Règle d'or : BUY en uptrend, SELL en downtrend. Ne jamais aller contre le marché."},
+      {q:"Qu'est-ce que le levier en trading ?",a:["Un type d'indicateur technique","La durée d'un trade","Un outil permettant de contrôler une position plus grande que son capital","Un signal de vente automatique"],c:2,e:"Le levier amplifie les gains et les pertes. Ex : levier 1:100 avec 1 000 $ contrôle 100 000 $. À utiliser avec prudence."},
+      {q:"Quel pourcentage maximum du capital risquer par trade ?",a:["10 à 20 %","50 %","1 à 2 %","Le maximum possible"],c:2,e:"Règle universelle : 1 à 2 % maximum par trade pour survivre aux séries de pertes."}
+    ],
+    en:[
+      {q:"During an uptrend, should you take buy or sell positions?",a:["Buys (BUY)","Sells (SELL)","Both","Neither"],c:0,e:"In an uptrend: buys only. Always trade in the direction of the trend."},
+      {q:"Is the support level at the top or bottom of the chart?",a:["At the top — ceiling","At the bottom — floor","In the middle","It depends"],c:1,e:"Support is a floor: price tends to bounce upward from this level."},
+      {q:"What is a resistance level?",a:["A level where price bounces upward","A ceiling where price struggles to rise","A high volatility zone","An entry signal"],c:1,e:"Resistance is a ceiling: sellers push price back down at this level."},
+      {q:"What does Higher High mean?",a:["A lower low","A peak higher than the previous peak","A higher low","An equal peak"],c:1,e:"Higher High = each new peak exceeds the previous one. A sign of bullish strength."},
+      {q:"What does SL stand for?",a:["Short Level","Stop Loss","Long Signal","Support Level"],c:1,e:"Stop Loss = an automatic order to limit losses at a predefined level. Essential."},
+      {q:"What is a ranging market?",a:["A strongly rising market","A price oscillating between support and resistance with no trend","A very volatile market","A bearish market"],c:1,e:"Range = price oscillates between support and resistance with no clear direction. Avoid directional trades."},
+      {q:"What is a candlestick (Japanese candle)?",a:["A volume indicator","A visual representation of price: open, close, high, low","An automatic buy signal","A type of trading account"],c:1,e:"A Japanese candlestick displays 4 data points: open, close, high and low over a given period."},
+      {q:"What does trading with the trend mean?",a:["Buying when price falls","BUY in uptrend / SELL in downtrend","Trading at any time","Waiting for a reversal"],c:1,e:"Golden rule: BUY in an uptrend, SELL in a downtrend. Never trade against the market."},
+      {q:"What is leverage in trading?",a:["A type of technical indicator","The duration of a trade","A tool that lets you control a position larger than your capital","An automatic sell signal"],c:2,e:"Leverage amplifies gains and losses. Example: 1:100 leverage with $1,000 controls $100,000. Use with caution."},
+      {q:"What is the maximum percentage of capital to risk per trade?",a:["10 to 20%","50%","1 to 2%","As much as possible"],c:2,e:"Universal rule: 1 to 2% maximum per trade to survive losing streaks."}
+    ]
+  };
+
+  var T={
+    fr:{
+      qnum:'Question',next:'QUESTION SUIVANTE &rarr;',finish:'VOIR MON RÉSULTAT &rarr;',
+      score:'SCORE',perfect:'SCORE PARFAIT !',almost:' / 10 &mdash; Presque !',
+      msg20:'Impressionnant ! Tu maîtrises les bases du trading. Tu as débloqué le rabais exclusif de 20 %.',
+      msg10:'Très bien ! 9 bonnes réponses sur 10. Tu as débloqué un rabais de 10 % sur la formation de ton choix.',
+      msglose:'Bon effort ! Continue tes études et reviens essayer.',
+      lbl20:'Rabais 20 % — Cliquez sur le bouton pour en profiter',
+      lbl10:'Rabais 10 % — Cliquez sur le bouton pour en profiter',
+      btn:'Réclamer mon rabais &rarr;',
+      doneTitleWin:'Quiz déjà complété',doneTitleLose:'Quiz déjà complété',
+      doneMsgWin:'Votre code rabais de ',doneActive:' est toujours actif.',
+      doneMsgLose:'Continuez vos études et revenez plus tard.',
+      doneBtn:'Réclamer mon rabais &rarr;'
+    },
+    en:{
+      qnum:'Question',next:'NEXT QUESTION &rarr;',finish:'SEE MY RESULT &rarr;',
+      score:'SCORE',perfect:'PERFECT SCORE!',almost:' / 10 &mdash; So close!',
+      msg20:'Impressive! You have solid trading fundamentals. You have unlocked the exclusive 20% discount.',
+      msg10:'Great job! 9 correct answers out of 10. You have unlocked a 10% discount on the course of your choice.',
+      msglose:'Good effort! Keep studying and come back to try again.',
+      lbl20:'20% discount — Click the button to claim it',
+      lbl10:'10% discount — Click the button to claim it',
+      btn:'Claim my discount &rarr;',
+      doneTitleWin:'Quiz already completed',doneTitleLose:'Quiz already completed',
+      doneMsgWin:'Your discount code ',doneActive:' is still active.',
+      doneMsgLose:'Keep studying and come back later.',
+      doneBtn:'Claim my discount &rarr;'
+    }
+  };
+
+  function t(){return T[gl()];}
+  function q(){return QS[gl()];}
+
+  var cur=0,sc=0,done=false,L=['A','B','C','D'];
+
+  function upBar(){if(qbar)qbar.style.width=(cur/q().length*100)+'%';}
+  function upSc(){if(qsc)qsc.textContent=sc+' / '+q().length;}
+
+  var stored=null;
+  try{stored=JSON.parse(localStorage.getItem(KEY));}catch(e){}
+  if(stored){
+    var w=stored.win; var sc2=stored.sc||0;
+    var perfect2=(sc2===10);
+    var code=perfect2?'QUIZZ20':'QUIZZ10';
+    var pct=perfect2?'20 %':'10 %';
+    var tx=t();
+    qb.innerHTML='<div class="quiz-result">'+
+      '<div class="quiz-result-ico">'+(w?(perfect2?'&#127942;':'&#127881;'):'&#128218;')+'</div>'+
+      '<div class="quiz-result-title '+(w?'win':'lose')+'">'+(w?tx.doneTitleWin:tx.doneTitleLose)+'</div>'+
+      '<div class="quiz-result-msg">'+(w?tx.doneMsgWin+'<strong style="color:var(--green);letter-spacing:.1em">'+code+'</strong>'+tx.doneActive:tx.doneMsgLose)+'</div>'+
+      (w?'<div class="quiz-promo-box"'+(perfect2?'':' style="border-color:rgba(249,115,22,.3);background:rgba(249,115,22,.08);"')+'>'+
+        '<div class="quiz-promo-code"'+(perfect2?'':' style="color:var(--fire)"')+'>'+code+'</div>'+
+        '<div class="quiz-promo-label">'+(perfect2?tx.lbl20:tx.lbl10)+'</div>'+
+      '</div>'+
+      '<a href="https://buy.stripe.com/8x2eVcfwifmB6fs7QX4ko00" target="_blank" class="btn-fire" style="display:inline-flex;margin-top:.75rem">'+tx.doneBtn+'</a>':'')+
+    '</div>';
+    return;
+  }
+
+  function showQ(){
+    done=false;
+    upBar();
+    var qs=q();
+    var qq=qs[cur];
+    var tx=t();
+    var s='<div class="quiz-q-num">'+tx.qnum+' '+(cur+1)+' / '+qs.length+'</div>';
+    s+='<div class="quiz-question">'+qq.q+'</div>';
+    s+='<div class="quiz-options">';
+    for(var i=0;i<qq.a.length;i++){
+      s+='<button class="quiz-opt" onclick="QZ.pick('+i+')"><span class="opt-bullet">'+L[i]+'</span>'+qq.a[i]+'</button>';
+    }
+    s+='</div>';
+    s+='<div class="quiz-feedback" id="qfb">'+qq.e+'</div>';
+    s+='<button class="quiz-next" id="qnxt" onclick="QZ.nxt()">'+(cur<qs.length-1?tx.next:tx.finish)+'</button>';
+    qb.innerHTML=s;
+    if(qsc)qsc.textContent=sc+' / '+qs.length;
+  }
+
+  window.QZ={
+    pick:function(i){
+      if(done)return;
+      done=true;
+      var qq=q()[cur];
+      var btns=qb.querySelectorAll('.quiz-opt');
+      for(var j=0;j<btns.length;j++)btns[j].disabled=true;
+      if(i===qq.c){btns[i].classList.add('correct');sc++;}
+      else{btns[i].classList.add('wrong');btns[qq.c].classList.add('correct');}
+      upSc();
+      var fb=document.getElementById('qfb');if(fb)fb.classList.add('show');
+      var nx=document.getElementById('qnxt');if(nx)nx.classList.add('show');
+    },
+    nxt:function(){
+      cur++;
+      if(cur<q().length){showQ();}else{showResult();}
+    }
+  };
+
+  function showResult(){
+    var perfect=(sc===q().length);
+    var almost=(sc===q().length-1);
+    var win=perfect||almost;
+    try{localStorage.setItem(KEY,JSON.stringify({win:win,sc:sc}));}catch(e){}
+    if(qbar)qbar.style.width='100%';
+    var tx=t();
+    var ico=perfect?'&#127942;':(almost?'&#127881;':'&#128218;');
+    var title=perfect?tx.perfect:(almost?(sc+tx.almost):(sc+' / '+q().length));
+    var titleClass=win?'win':'lose';
+    var msg=perfect?tx.msg20:(almost?tx.msg10:tx.msglose);
+    var promo='';
+    if(perfect){
+      promo='<div class="quiz-promo-box"><div class="quiz-promo-code">QUIZZ20</div>'+
+        '<div class="quiz-promo-label">'+tx.lbl20+'</div></div>'+
+        '<a href="https://buy.stripe.com/8x2eVcfwifmB6fs7QX4ko00" target="_blank" class="btn-fire" style="display:inline-flex">'+tx.btn+'</a>';
+    } else if(almost){
+      promo='<div class="quiz-promo-box" style="border-color:rgba(249,115,22,.3);background:rgba(249,115,22,.08);">'+
+        '<div class="quiz-promo-code" style="color:var(--fire)">QUIZZ10</div>'+
+        '<div class="quiz-promo-label">'+tx.lbl10+'</div></div>'+
+        '<a href="https://buy.stripe.com/8x2eVcfwifmB6fs7QX4ko00" target="_blank" class="btn-fire" style="display:inline-flex">'+tx.btn+'</a>';
+    }
+    qb.innerHTML='<div class="quiz-result">'+
+      '<div class="quiz-result-ico">'+ico+'</div>'+
+      '<div class="quiz-result-title '+titleClass+'">'+title+'</div>'+
+      '<div class="quiz-result-msg">'+msg+'</div>'+
+      promo+'</div>';
+  }
+
+  showQ();
+
+  // Re-render when language changes
+  window._quizRefreshLang = function(){
+    if(stored){
+      // Redraw "already done" screen in new language
+      var w=stored.win; var sc2=stored.sc||0;
+      var perfect2=(sc2===10);
+      var code=perfect2?'QUIZZ20':'QUIZZ10';
+      var pct=perfect2?'20 %':'10 %';
+      var tx=t();
+      qb.innerHTML='<div class="quiz-result">'+
+        '<div class="quiz-result-ico">'+(w?(perfect2?'&#127942;':'&#127881;'):'&#128218;')+'</div>'+
+        '<div class="quiz-result-title '+(w?'win':'lose')+'">'+(w?tx.doneTitleWin:tx.doneTitleLose)+'</div>'+
+        '<div class="quiz-result-msg">'+(w?tx.doneMsgWin+'<strong style="color:var(--green);letter-spacing:.1em">'+code+'</strong>'+tx.doneActive:tx.doneMsgLose)+'</div>'+
+        (w?'<div class="quiz-promo-box"'+(perfect2?'':' style="border-color:rgba(249,115,22,.3);background:rgba(249,115,22,.08);"')+'>'+
+          '<div class="quiz-promo-code"'+(perfect2?'':' style="color:var(--fire)"')+'>'+code+'</div>'+
+          '<div class="quiz-promo-label">'+(perfect2?tx.lbl20:tx.lbl10)+'</div></div>'+
+          '<a href="https://buy.stripe.com/8x2eVcfwifmB6fs7QX4ko00" target="_blank" class="btn-fire" style="display:inline-flex;margin-top:.75rem">'+tx.doneBtn+'</a>':'')+
+      '</div>';
+      return;
+    }
+    // Redraw current question in new language, preserving answered state
+    showQ();
+    // If already answered on this question, keep done=true
+    var qs=q();
+    if(qsc)qsc.textContent=sc+' / '+qs.length;
+  };
+
+})();
+}); // DOMContentLoaded
+</script>
 </body>
 </html>
