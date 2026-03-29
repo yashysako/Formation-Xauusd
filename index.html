@@ -785,6 +785,30 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .hero   { margin-top: 72px !important; }
 }
 
+
+/* ── Mobile fixed background stability fix ─────────────────────
+   On iOS Safari / Android Chrome, fixed elements shift when the
+   browser toolbar hides. Force GPU layer to prevent this.        */
+@media (max-width: 900px) {
+  .embers-canvas,
+  .ember-floor,
+  .smoke-wrap,
+  #hero-candles {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  /* Use 100dvh (dynamic viewport height) so fixed covers real screen */
+  .embers-canvas,
+  #hero-candles {
+    height: 100dvh;
+    top: 0;
+  }
+  .smoke-wrap { height: 100dvh; }
+}
+
 </style>
 </head>
 <body>
@@ -856,9 +880,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
         <span data-i18n="hero-badge">Formation complète Forex, Commodités &amp; Métaux</span>
       </div>
       <h1>
-        <span class="h1-line">DU CHAOS</span>
-        <span class="h1-line h1-fire" data-text="À LA CONSISTANCE" data-i18n-custom="hero-h1-fire">À LA</span>
-        <span class="h1-line" style="color:var(--fire)">CONSISTANCE</span>
+        <span data-i18n="hero-h1-display">DU CHAOS<br><span class="h1-fire">À LA<br>CONSISTANCE</span></span>
       </h1>
       <p class="hero-sub" data-i18n="hero-desc">Maîtrisez le trading sur tous les marchés avec une formation structurée, un mental en béton et un accompagnement direct.</p>
       <div class="hero-btns">
@@ -1668,6 +1690,7 @@ const translations = {
             // ── HERO ──
             'hero-badge': { fr: 'Formation complète Forex, Commodités & Métaux', en: 'Complete Forex, Commodities & Metals Course' },
             'hero-h1': { fr: 'Du chaos <span class="text-fire">à la consistance</span>', en: 'From chaos <span class="text-fire">to consistency</span>' },
+            'hero-h1-display': { fr: 'DU CHAOS<br><span class="h1-fire">À LA<br>CONSISTANCE</span>', en: 'FROM CHAOS<br><span class="h1-fire">TO<br>CONSISTENCY</span>' },
             'hero-desc': { fr: 'Maîtrisez le trading sur tous les marchés avec une formation structurée, un mental en béton et un accompagnement direct.', en: 'Master trading across all markets with a structured course, an iron mindset and direct mentorship.' },
             'hero-btn1': { fr: 'Commencer maintenant →', en: 'Start now →' },
             'hero-btn2': { fr: 'Voir le programme', en: 'View the program' },
