@@ -494,11 +494,10 @@ body::before {
 
 /* Ember glow at bottom — the "sleeping" embers */
 .ember-floor {
-  position: fixed;
+  position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 180px;
   pointer-events: none;
-  z-index: 0;
   overflow: hidden;
 }
 .ember-floor::before {
@@ -524,19 +523,17 @@ body::before {
 
 /* Individual floating ember particles */
 .embers-canvas {
-  position: fixed;
+  position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
 }
 
 /* Smoke wisps rising */
 .smoke-wrap {
-  position: fixed;
+  position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 100vh;
+  height: 100%;
   pointer-events: none;
-  z-index: 0;
   overflow: hidden;
 }
 .smoke {
@@ -786,27 +783,32 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 }
 
 
-/* ── Mobile fixed background stability fix ─────────────────────
-   On iOS Safari / Android Chrome, fixed elements shift when the
-   browser toolbar hides. Force GPU layer to prevent this.        */
-@media (max-width: 900px) {
-  .embers-canvas,
-  .ember-floor,
-  .smoke-wrap,
-  #hero-candles {
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    will-change: transform;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  /* Use 100dvh (dynamic viewport height) so fixed covers real screen */
-  .embers-canvas,
-  #hero-candles {
-    height: 100dvh;
-    top: 0;
-  }
-  .smoke-wrap { height: 100dvh; }
+
+
+/* ── Single fixed background wrapper ───────────────────────────
+   One fixed element = no mobile repaint/jump issue             */
+#bg-layer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  /* Force GPU composite layer — prevents iOS scroll jump */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#hero-candles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: .45;
 }
 
 </style>
@@ -815,10 +817,12 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 <!-- Cursor -->
 
 <!-- ── Ember background elements ────────────────────────────────────── -->
-<div class="ember-floor"></div>
-<canvas class="embers-canvas" id="embers-canvas"></canvas>
-<div class="smoke-wrap" id="smoke-wrap"></div>
-<canvas id="hero-candles" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.45;z-index:0"></canvas>
+<div id="bg-layer">
+  <div class="ember-floor"></div>
+  <canvas class="embers-canvas" id="embers-canvas"></canvas>
+  <div class="smoke-wrap" id="smoke-wrap"></div>
+  <canvas id="hero-candles"></canvas>
+</div>
 <div id="cursor"></div>
 <div id="cursor-ring"></div>
 
